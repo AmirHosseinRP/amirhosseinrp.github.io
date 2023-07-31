@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    color: white;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: overlay;
+  overflow-x: hidden;
+  #__next {
+    width: 100% !important;
+    max-width: 1140px !important;
+    height: 100% !important;
+  }
+}
