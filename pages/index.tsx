@@ -1,5 +1,5 @@
 import Image from "next/image";
-import {useRef, useState } from "react";
+import { useRef, useState } from "react";
 import Gallery from "@/components/Gallery";
 import logo from "@/assets/images/logo.png";
 import Switch from "@mui/material/Switch";
