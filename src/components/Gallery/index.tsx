@@ -3,7 +3,6 @@ import GalleryCard from "../GalleryCard";
 
 export default function Gallery() {
   const scrollAmount = useScrollAmount();
-  console.log(scrollAmount);
   return (
     <>
       <section className="w-screen h-[85vh] overflow-hidden">
