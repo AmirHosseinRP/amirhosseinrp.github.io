@@ -7,7 +7,7 @@ import HelloSection from "@/views/HelloSection";
 export default function Home() {
   return (
     <>
-      <div className="flex flex-row w-full justify-around">
+      <div className="flex flex-row w-full justify-between">
         <Image src={logo} alt="site logo" className="w-[200px] h-auto" />
         <h1 className="text-4xl mt-4">Amirhossein Rezapanah</h1>
       </div>

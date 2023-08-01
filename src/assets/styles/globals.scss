@@ -18,3 +18,13 @@ body {
     height: 100% !important;
   }
 }
+
+.stroked-text-black {
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+}
+
+.stroked-text-white {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+}

@@ -6,6 +6,8 @@ import { useRef, useState, useEffect, ReactElement } from "react";
 type RevealDivProps = {
   visible?: boolean;
   children: ReactElement;
+  fadeOnly?: boolean;
+  className?: string;
 };
 export default function RevealingDiv(props: RevealDivProps) {
   const [isElementVisible, setIsElementVisible] = useState(props.visible);
@@ -42,20 +44,26 @@ export default function RevealingDiv(props: RevealDivProps) {
     <>
       <div
         ref={targetElementRef}
-        className="h-fit w-ful flex flex-col justify-center items-center"
+        className={`h-fit w-full flex flex-col justify-center items-center ${props.className}`}
       >
-        <Slide
-          direction="up"
-          in={isElementVisible}
-          container={targetElementRef.current}
-          timeout={800}
-        >
-          <div>
-            <Fade in={isElementVisible} timeout={1800}>
-              {props.children}
-            </Fade>
-          </div>
-        </Slide>
+        {props.fadeOnly ? (
+          <Fade in={isElementVisible} timeout={1800}>
+            {props.children}
+          </Fade>
+        ) : (
+          <Slide
+            direction="up"
+            in={isElementVisible}
+            container={targetElementRef.current}
+            timeout={800}
+          >
+            <div className="w-full">
+              <Fade in={isElementVisible} timeout={1800}>
+                {props.children}
+              </Fade>
+            </div>
+          </Slide>
+        )}
       </div>
     </>
   );
