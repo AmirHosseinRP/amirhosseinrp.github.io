@@ -26,7 +26,7 @@ export default function RevealingDiv(props: RevealDivProps) {
         window.innerHeight || document.documentElement.clientHeight;
 
       // Check if the element is at least 50% visible
-      if (rect.top < windowHeight * 0.9 && rect.bottom >= 0)
+      if (rect.top < windowHeight * 0.95 && rect.bottom >= 0)
         setIsElementVisible(true);
     };
 

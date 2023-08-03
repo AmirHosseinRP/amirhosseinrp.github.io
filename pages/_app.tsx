@@ -1,4 +1,5 @@
 import "@/assets/styles/globals.scss";
+import "@/assets/styles/materialui.scss";
 import type { AppProps } from "next/app";
 import { Gantari } from "next/font/google";
 const gantari = Gantari({ subsets: ["latin"] });

@@ -1,17 +1,13 @@
-import Image from "next/image";
 import Gallery from "@/components/Gallery";
-import logo from "@/assets/images/logo.png";
 import RevealingDiv from "@/components/RevealingDiv";
+import Header from "@/views/Header";
 import HelloSection from "@/views/HelloSection";
 
 export default function Home() {
   return (
     <>
-      <div className="flex flex-row w-full justify-between">
-        <Image src={logo} alt="site logo" className="w-[200px] h-auto" />
-        <h1 className="text-4xl mt-4">Amirhossein Rezapanah</h1>
-      </div>
-      <HelloSection/>
+      <Header />
+      <HelloSection />
       <Gallery />
       <RevealingDiv>
         <h1 className="text-6xl">byeeeee</h1>
