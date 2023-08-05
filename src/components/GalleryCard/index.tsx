@@ -3,8 +3,8 @@ import Image from "next/image";
 export default function GalleryCard() {
   return (
     <>
-      <div className="relative h-[50vh] w-[35.5vw] aspect-[4/3] max-[1000px]:w-[50vw] max-[1000px]:h-[40vh] max-[500px]:w-[80vw] max-[500px]:h-[30vh]">
-        <Image src={testImage} alt={".."} fill className="object-cover" />
+      <div className="relative h-[50vh] w-[35.5vw] aspect-[4/3] max-[1000px]:w-[50vw] max-[1000px]:h-[40vh] max-[650px]:w-[80vw] max-[650px]:h-[30vh]">
+        <Image src={testImage} alt={".."} fill className="object-cover" loading="eager" sizes="50vw"/>
       </div>
     </>
   );

@@ -12,19 +12,17 @@ body {
   position: relative;
   overflow: overlay;
   overflow-x: hidden;
-  #__next {
-    width: 100% !important;
-    max-width: 1200px !important;
-    height: 100% !important;
-  }
+  height: 400vh;
+  background-image: url("../images/backgroundfullsize3.webp");
+  background-size: contain ;
 }
 
 .stroked-text-black {
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: black;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
 }
 
 .stroked-text-white {
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
 }
