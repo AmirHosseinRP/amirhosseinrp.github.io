@@ -9,7 +9,9 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-start p-24 h-[2000px] relative">
       <Typography tagName="h1">hello</Typography>
       <ScrollMotionDiv>scroll</ScrollMotionDiv>
-      <CursorMotionDiv></CursorMotionDiv>
+      <CursorMotionDiv behavior="fixed">fixed</CursorMotionDiv>
+      <CursorMotionDiv behavior="attract">attract</CursorMotionDiv>
+      <CursorMotionDiv behavior="scape">scape</CursorMotionDiv>
     </main>
   );
 }

@@ -1,26 +1,41 @@
 import useCursorPosition from "@/shared/hooks/useCursorPosition";
-import useElementPosition from "@/shared/hooks/useElementPosition";
+import useWindowSize from "@/shared/hooks/useWindowSize";
 import { useRef, type HTMLAttributes } from "react";
 
-type Props = HTMLAttributes<HTMLOrSVGElement>;
+type Props = HTMLAttributes<HTMLOrSVGElement> & {
+  behavior: "fixed" | "attract" | "scape";
+};
 
 export default function CursorMotionDiv(props: Props) {
-  const { children } = props;
+  const { children, behavior } = props;
   const ref = useRef<HTMLDivElement>(null);
-  const elementPosition = useElementPosition(ref);
+  const cursorPosition = useCursorPosition();
+  const windowSize = useWindowSize();
+  const styles = {
+    fixed: {
+      position: "fixed" as const,
+      top: `${cursorPosition.y - 5}px`,
+      left: `${cursorPosition.x - 15}px`,
+      transitionTimingFunction: "ease-out",
+      transitionDuration: "50ms",
+    },
+    attract: {
+      position: "fixed" as const,
+      bottom: `${windowSize.height / 2 - cursorPosition.y / 10}px`,
+      right: `${windowSize.width / 2 - cursorPosition.x / 10}px`,
+      transitionTimingFunction: "ease-out",
+      transitionDuration: "200ms",
+    },
+    scape: {
+      position: "fixed" as const,
+      transitionTimingFunction: "ease-out",
+      transitionDuration: "200ms",
+    },
+  };
 
-  const { cursorX, cursorY } = useCursorPosition();
   return (
-    <div
-      ref={ref}
-      style={{
-        position: "relative",
-        bottom: `${elementPosition.x - cursorY / 10}px`,
-        right: `${elementPosition.x - cursorX / 10}px`,
-      }}
-      className="duration-1000 ease-out"
-    >
-      {elementPosition.x} {elementPosition.y} <br /> {cursorX} {cursorY}
+    <div ref={ref} style={styles[behavior]} className="select-none">
+      {children}
     </div>
   );
 }

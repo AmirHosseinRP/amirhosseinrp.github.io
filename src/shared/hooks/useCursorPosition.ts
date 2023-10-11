@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 
-function useCursorPosition(): { cursorX: number; cursorY: number } {
-  const [cursorPosition, setCursorPosition] = useState({ cursorX: 0, cursorY: 0 });
+function useCursorPosition(): { x: number; y: number } {
+  const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
     const handleCursorMove = (event: MouseEvent) => {
       setCursorPosition({
-        cursorX: event.clientX,
-        cursorY: event.clientY,
+        x: event.clientX,
+        y: event.clientY,
       });
     };
 
