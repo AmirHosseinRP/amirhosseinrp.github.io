@@ -1,17 +1,17 @@
 "use client";
 
-import CursorMotionDiv from "@/ui/atoms/CursorMotionDiv/CursorMotionDiv";
 import ScrollMotionDiv from "@/ui/atoms/ScrollMotionDiv/ScrollMotionDiv";
 import Typography from "@/ui/atoms/Typography/Typography";
+import CursorEye from "@/ui/molecules/CursorEye/CursorEye";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-start p-24 h-[2000px] relative">
-      <Typography tagName="h1">hello</Typography>
-      <ScrollMotionDiv>scroll</ScrollMotionDiv>
-      <CursorMotionDiv behavior="fixed">fixed</CursorMotionDiv>
-      <CursorMotionDiv behavior="attract">attract</CursorMotionDiv>
-      <CursorMotionDiv behavior="scape">scape</CursorMotionDiv>
-    </main>
+    <>
+      <CursorEye />
+      <main className="flex min-h-screen flex-col items-center justify-start h-[2000px] relative">
+        <Typography tagName="h1">hello</Typography>
+        <ScrollMotionDiv>scroll</ScrollMotionDiv>
+      </main>
+    </>
   );
 }
