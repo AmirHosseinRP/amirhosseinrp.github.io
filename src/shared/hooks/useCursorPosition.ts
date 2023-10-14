@@ -4,17 +4,24 @@ function useCursorPosition(): { x: number; y: number } {
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
+    let animationFrameId: number;
+
     const handleCursorMove = (event: MouseEvent) => {
       setCursorPosition({
-        x: event.clientX,
-        y: event.clientY,
+        x: window.scrollX + event.clientX,
+        y: window.scrollY + event.clientY,
       });
     };
 
-    window.addEventListener("mousemove", handleCursorMove);
+    const updateCursorPosition = (event: MouseEvent) => {
+      animationFrameId = window.requestAnimationFrame(() => handleCursorMove(event));
+    };
+
+    window.addEventListener("mousemove", updateCursorPosition);
 
     return () => {
-      window.removeEventListener("mousemove", handleCursorMove);
+      window.removeEventListener("mousemove", updateCursorPosition);
+      window.cancelAnimationFrame(animationFrameId);
     };
   }, []);
 
