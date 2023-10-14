@@ -23,16 +23,16 @@ function CursorEye() {
         <div className="w-12 h-12 rounded-tr-[100%] rounded-bl-[100%] -rotate-45 absolute bg-black border-white border border-solid" />
       </CursorMotionDiv>
       <CursorMotionDiv behavior="fixed" delay={1000}>
-        <div className="w-[1px] h-2 bg-white relative bottom-[6px] right-[34px] -rotate-[60deg]" />
+        <div className="w-[1px] h-2 bg-white relative bottom-[5px] right-[34px] -rotate-[60deg]" />
       </CursorMotionDiv>
       <CursorMotionDiv behavior="fixed" delay={1050}>
-        <div className="w-[1px] h-[9px] bg-white relative bottom-[20px]" />
+        <div className="w-[1px] h-[9px] bg-white relative bottom-[19px]" />
       </CursorMotionDiv>
       <CursorMotionDiv behavior="fixed" delay={1100}>
-        <div className="w-[1px] h-2 bg-white relative bottom-[6px] left-[34px] rotate-[60deg]" />
+        <div className="w-[1px] h-2 bg-white relative bottom-[5px] left-[34px] rotate-[60deg]" />
       </CursorMotionDiv>
       <CursorMotionDiv behavior="fixed" delay={1150}>
-        <div className="w-[1px] h-[5px] bg-white relative top-[12px]" />
+        <div className="w-[1px] h-[5px] bg-white relative top-[13px]" />
       </CursorMotionDiv>
     </>
   );
