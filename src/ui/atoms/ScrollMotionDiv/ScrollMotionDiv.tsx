@@ -1,18 +1,15 @@
 import useScrollAmount from "@/shared/hooks/useScrollAmount";
-import { HTMLAttributes, memo } from "react";
+import gsap from "gsap";
+import { ReactNode, memo, useEffect } from "react";
 
-type Props = HTMLAttributes<HTMLOrSVGElement>;
+type Props = { children: ReactNode };
 function ScrollMotionDiv(props: Props) {
   const { children } = props;
   const scrollAmount = useScrollAmount();
-  return (
-    <div
-      style={{ position: "relative", transform: `translate(0,${scrollAmount + 400}px)` }}
-      className="duration-1000 ease-out"
-    >
-      {children}
-    </div>
-  );
+  useEffect(() => {
+    gsap.to(".scroll-motion-div", { y: scrollAmount });
+  }, [scrollAmount]);
+  return <div className="scroll-motion-div duration-500 ease-out relative top-[50vh]">{children}</div>;
 }
 
 export default memo(ScrollMotionDiv);
