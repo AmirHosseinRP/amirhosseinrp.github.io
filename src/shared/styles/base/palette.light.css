@@ -1,0 +1,219 @@
+:root {
+    /**
+     * :::: primary colors (brand) ::::
+     */
+    --rp-brand-50: #F0F7FF;
+    --rp-brand-100: #E0EFFF;
+    --rp-brand-200: #C2DFFF;
+    --rp-brand-300: #8AC2FF;
+    --rp-brand-400: #3396FF;
+    --rp-brand-500: #0369CD;
+    --rp-brand-600: #0255A6;
+    --rp-brand-700: #02417E;
+    --rp-brand-800: #02315F;
+    --rp-brand-900: #011F3C;
+    --rp-brand-950: #011223;
+
+    /**
+    * :::: primary colors (info) ::::
+    */
+    --rp-info-50: #F1F9FE;
+    --rp-info-100: #E2F2FC;
+    --rp-info-200: #BFE3F8;
+    --rp-info-300: #87CEF2;
+    --rp-info-400: #33ADE6;
+    --rp-info-500: #209CD7;
+    --rp-info-600: #127DB7;
+    --rp-info-700: #106494;
+    --rp-info-800: #11557B;
+    --rp-info-900: #144766;
+    --rp-info-950: #0D2D44;
+
+    /**
+    * :::: primary colors (success) ::::
+    */
+    --rp-success-50: #F7FDF8;
+    --rp-success-100: #E5FAEA;
+    --rp-success-200: #C4F3CF;
+    --rp-success-300: #92E7A6;
+    --rp-success-400: #5BD279;
+    --rp-success-500: #34CB5A;
+    --rp-success-600: #239A41;
+    --rp-success-700: #1F7A37;
+    --rp-success-800: #1E6230;
+    --rp-success-900: #1A512A;
+    --rp-success-950: #092F15;
+
+    /**
+     * :::: primary colors (warning) ::::
+     */
+    --rp-warning-50: #FFFDF5;
+    --rp-warning-100: #FFF4D1;
+    --rp-warning-200: #FFE78F;
+    --rp-warning-300: #FFD152;
+    --rp-warning-400: #FFBD24;
+    --rp-warning-500: #FF9500;
+    --rp-warning-600: #EB7100;
+    --rp-warning-700: #C54D02;
+    --rp-warning-800: #A03B08;
+    --rp-warning-900: #83310B;
+    --rp-warning-950: #521800;
+
+    /**
+     * :::: primary colors (error) ::::
+     */
+    --rp-error-50: #FEF6F6;
+    --rp-error-100: #FEE8E6;
+    --rp-error-200: #FFCFCC;
+    --rp-error-300: #FDB0AA;
+    --rp-error-400: #F97F76;
+    --rp-error-500: #F0493D;
+    --rp-error-600: #DF362A;
+    --rp-error-700: #C1251A;
+    --rp-error-800: #9D231B;
+    --rp-error-900: #86241D;
+    --rp-error-950: #480E09;
+
+    /**
+     * :::: primary colors (gray blue) ::::
+     */
+    --rp-gray-blue-50: #F9FAFB;
+    --rp-gray-blue-100: #F2F4F7;
+    --rp-gray-blue-200: #EAECF0;
+    --rp-gray-blue-300: #D0D5DD;
+    --rp-gray-blue-400: #98A2B3;
+    --rp-gray-blue-500: #667085;
+    --rp-gray-blue-600: #475467;
+    --rp-gray-blue-700: #344054;
+    --rp-gray-blue-800: #1D2939;
+    --rp-gray-blue-900: #101828;
+    --rp-gray-blue-950: #080C14;
+
+    /**
+     * :::: primary colors (gray) ::::
+     */
+    --rp-gray-50: #F6F6F6;
+    --rp-gray-100: #E7E7E7;
+    --rp-gray-200: #D1D1D1;
+    --rp-gray-300: #B0B0B0;
+    --rp-gray-400: #888888;
+    --rp-gray-500: #6D6D6D;
+    --rp-gray-600: #5D5D5D;
+    --rp-gray-700: #4F4F4F;
+    --rp-gray-800: #454545;
+    --rp-gray-900: #3D3D3D;
+    --rp-gray-950: #1E1E1E;
+
+    /**
+     * :::: button colors ::::
+     */
+    --rp-btn-primary-normal-disable: #98C2EB;
+
+    --rp-btn-primary-light: #E6F0FA;
+    --rp-btn-primary-light-hover: #D9E9F8;
+    --rp-btn-primary-light-active: #CDE1F5;
+
+    --rp-btn-primary-normal: #0369CD;
+    --rp-btn-primary-normal-hover: #035FB9;
+    --rp-btn-primary-normal-active: #0254A4;
+
+    --rp-btn-info-light: #E9F5FB;
+    --rp-btn-info-light-hover: #DEF0F9;
+    --rp-btn-info-light-active: #BAE0F3;
+
+    --rp-btn-info-normal: #209CD7;
+    --rp-btn-info-normal-hover: #1D8CC2;
+    --rp-btn-info-normal-active: #1A7DAC;
+
+    --rp-btn-success-light: #EBFAEF;
+    --rp-btn-success-light-hover: #E1F7E6;
+    --rp-btn-success-light-active: #C0EFCC;
+
+    --rp-btn-success-normal: #34CB5A;
+    --rp-btn-success-normal-hover: #2FB751;
+    --rp-btn-success-normal-active: #2AA248;
+
+    --rp-btn-warning-light: #FFF5E7;
+    --rp-btn-warning-light-hover: #FFF0DA;
+    --rp-btn-warning-light-active: #FFDFB3;
+
+    --rp-btn-warning-normal: #FF990A;
+    --rp-btn-warning-normal-hover: #E68A09;
+    --rp-btn-warning-normal-active: #CC7A08;
+
+    --rp-btn-danger-light: #FEEDEC;
+    --rp-btn-danger-light-hover: #FDE4E2;
+    --rp-btn-danger-light-active: #FAC7C3;
+
+    --rp-btn-danger-normal: #F0493D;
+    --rp-btn-danger-normal-hover: #D84237;
+    --rp-btn-danger-normal-active: #C03A31;
+
+    --rp-btn-gray: #F0F1F3;
+    --rp-btn-gray-hover: #E8EAED;
+    --rp-btn-gray-active: #E3E5E8;
+
+    /**
+     * :::: menu colors ::::
+     */
+    --rp-menu: #F9FAFB;
+    --rp-menu-hover: #F2F4F7;
+    --rp-menu-active: #F2F4F7;
+
+    /**
+     * :::: background colors ::::
+     */
+    --rp-bg-default: #F5F7FA;
+    --rp-bg-paper: #FFFFFF;
+    --rp-bg-menu: #FFFFFF;
+    --rp-bg-modal: #34405452;
+
+    /**
+    * :::: text colors ::::
+    */
+    --rp-text-primary: #101828;
+    --rp-text-secondary: #667085;
+    --rp-text-placeholder: #98A2B3;
+    --rp-text-disabled: #98A2B3;
+    --rp-text-white: #FFFFFF;
+    --rp-text-link: #0C8CE9;
+
+    /**
+    * :::: transparent white colors ::::
+    */
+    --rp-transparent-white-8: #FFFFFF14;
+    --rp-transparent-white-12: #FFFFFF1F;
+    --rp-transparent-white-16: #FFFFFF29;
+    --rp-transparent-white-24: #FFFFFF3D;
+    --rp-transparent-white-32: #FFFFFF52;
+    --rp-transparent-white-48: #FFFFFF7A;
+    --rp-transparent-white-80: #FFFFFFCC;
+
+    /**
+    * :::: transparent black colors ::::
+    */
+    --rp-transparent-black-8: #00000014;
+    --rp-transparent-black-12: #0000001F;
+    --rp-transparent-black-16: #00000029;
+    --rp-transparent-black-24: #0000003D;
+    --rp-transparent-black-32: #00000052;
+    --rp-transparent-black-48: #00000052;
+    --rp-transparent-black-80: #000000CC;
+
+    /**
+    * :::: neutral colors ::::
+    */
+    --rp-neutral-white: #FFFFFF;
+    --rp-neutral-black: #000000;
+
+    /**
+     * :::: shadows ::::
+     */
+    --rp-shadow-xs: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    --rp-shadow-sm: 0px 1px 2px 0px rgba(16, 24, 40, 0.06), 0px 1px 3px 0px rgba(16, 24, 40, 0.10);
+    --rp-shadow-md: 0px 2px 4px 0px rgba(16, 24, 40, 0.06), 0px 4px 8px -2px rgba(16, 24, 40, 0.10);
+    --rp-shadow-lg: 0px 4px 6px -2px rgba(16, 24, 40, 0.03), 0px 12px 16px -4px rgba(16, 24, 40, 0.08);
+    --rp-shadow-xl: 0px 8px 8px -4px rgba(16, 24, 40, 0.03), 0px 20px 24px -4px rgba(16, 24, 40, 0.08);
+    --rp-shadow-2xl: 0px 24px 48px -12px rgba(16, 24, 40, 0.18);
+    --rp-shadow-3xl: 0px 32px 64px -12px rgba(16, 24, 40, 0.14);
+}
