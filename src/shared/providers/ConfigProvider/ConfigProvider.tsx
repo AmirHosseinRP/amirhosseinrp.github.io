@@ -1,10 +1,14 @@
 "use client";
 
 import { type PropsWithChildren } from "react";
-import { Toaster } from "react-hot-toast";
+import { ToastContainer } from "react-toastify";
 import { SWRConfig } from "swr";
 
-const ConfigProvider = (props: PropsWithChildren) => {
+interface Props extends PropsWithChildren {
+  theme: string;
+}
+
+const ConfigProvider = (props: Props) => {
   return (
     <>
       <SWRConfig
@@ -17,7 +21,16 @@ const ConfigProvider = (props: PropsWithChildren) => {
         {props.children}
       </SWRConfig>
 
-      <Toaster />
+      <ToastContainer
+        position="top-right"
+        theme={props.theme === "dark" ? "dark" : "light"}
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        draggable
+        pauseOnHover
+      />
     </>
   );
 };

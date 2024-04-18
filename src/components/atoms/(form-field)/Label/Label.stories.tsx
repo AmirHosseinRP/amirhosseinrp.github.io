@@ -1,0 +1,17 @@
+import { type Meta, type StoryObj } from "@storybook/react";
+import Label from "./Label";
+
+const meta = {
+  title: "components/atoms/form-field/Label",
+  component: Label,
+  parameters: { layout: "centered" },
+  tags: ["autodocs"],
+} satisfies Meta<typeof Label>;
+
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+export const Primary: Story = { args: { htmlFor: "name", label: "First Name" } };
+export const Secondary: Story = {
+  args: { htmlFor: "amount", label: "Price", required: true, unit: "Dollars" },
+};

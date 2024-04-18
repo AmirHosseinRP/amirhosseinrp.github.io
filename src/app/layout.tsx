@@ -4,6 +4,8 @@ import { type Metadata, type Viewport } from "next";
 import { cookies } from "next/headers";
 import Script from "next/script";
 import { type ReactNode } from "react";
+import "react-toastify/dist/ReactToastify.css";
+import "@/shared/styles/globals.css";
 
 export const viewport: Viewport = {
   themeColor: "#0369cd",
@@ -18,18 +20,20 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: "Amirhossein Rezapanah",
   description: "My portfolio web site!",
-  manifest: "/manifest.json",
+  // manifest: "/manifest.json",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   const cookieStore = cookies();
   const theme = cookieStore.get(Cookie.THEME)?.value ?? "light";
 
-  <html lang="en" dir="ltr" className={theme} data-theme={theme}>
-    <body className="hide-scrollbar">
-      <ConfigProvider>{children}</ConfigProvider>
+  return (
+    <html lang="en" dir="ltr" className={theme} data-theme={theme}>
+      <body className="hide-scrollbar">
+        <ConfigProvider theme={theme}>{children}</ConfigProvider>
 
-      <Script src="/service-worker.config.js" strategy="worker" />
-    </body>
-  </html>;
+        <Script src="/service-worker.config.js" strategy="worker" />
+      </body>
+    </html>
+  );
 }
