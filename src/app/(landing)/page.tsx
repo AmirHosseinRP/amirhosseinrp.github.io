@@ -1,3 +1,5 @@
+import CursorContainer from "@/ui/(cursor)/CursorContainer/CursorContainer";
+
 export default function HomePage() {
-  return <div>home page</div>;
+  return <CursorContainer />;
 }
