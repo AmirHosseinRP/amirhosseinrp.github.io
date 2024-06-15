@@ -1,12 +1,12 @@
 "use client";
 
+import ErrorMessage from "@/components/atoms/(form-field)/ErrorMessage/ErrorMessage";
+import HelperText from "@/components/atoms/(form-field)/HelperText/HelperText";
+import Label from "@/components/atoms/(form-field)/Label/Label";
 import { memo, type MemoExoticComponent, type PropsWithChildren, type ReactNode } from "react";
-import ErrorMessage from "~/component/atoms/(form-field)/ErrorMessage/ErrorMessage";
-import HelperText from "~/component/atoms/(form-field)/HelperText/HelperText";
-import Label from "~/component/atoms/(form-field)/Label/Label";
-import FormFieldCellphoneNumber from "~/component/molecules/FormField/components/FormField.CellphoneNumber";
-import FormFieldNumber from "~/component/molecules/FormField/components/FormField.Number";
-import FormFieldText from "~/component/molecules/FormField/components/FormField.Text";
+import FormFieldText from "./components/FormField.Text";
+import FormFieldCellphoneNumber from "./components/FormField.CellphoneNumber";
+import FormFieldNumber from "./components/FormField.Number";
 
 interface MemoizedModalCompose {
   Text: typeof FormFieldText;

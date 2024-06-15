@@ -1,8 +1,8 @@
 import { memo } from "react";
 import { useController, useFormContext } from "react-hook-form";
-import Input from "~/components/atoms/Input/Input";
 import FormField from "../FormField";
 import { type FormFieldProps } from "../FormField.types";
+import Input from "@/components/atoms/Input/Input";
 
 const FormFieldText = (props: FormFieldProps) => {
   const formMethods = useFormContext();

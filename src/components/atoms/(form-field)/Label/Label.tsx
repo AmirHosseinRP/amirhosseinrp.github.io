@@ -6,10 +6,10 @@ const Label = (props: Props) => {
   const { htmlFor, label, required, unit } = props;
 
   return (
-    <label htmlFor={htmlFor} className="dig-prose-label3 text-dig-text-primary px-2">
+    <label htmlFor={htmlFor} className="rp-prose-label3 text-rp-text-primary px-2">
       {label}
-      {required && <sup className="text-dig-error-500 text-base">*</sup>}
-      {unit && <span className="dig-prose-caption1">&nbsp;({unit})</span>}
+      {required && <sup className="text-rp-error-500 text-base">*</sup>}
+      {unit && <span className="rp-prose-caption1">&nbsp;({unit})</span>}
     </label>
   );
 };

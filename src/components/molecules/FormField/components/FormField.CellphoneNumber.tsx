@@ -1,12 +1,8 @@
-import { type ChangeEventHandler, memo, useState } from "react";
+import Input from "@/components/atoms/Input/Input";
+import { memo, useState, type ChangeEventHandler } from "react";
 import { useController, useFormContext } from "react-hook-form";
-import {
-  formatCellphoneNumber,
-  removeNonNumericCharacters,
-} from "~/component/molecules/FormField/FormField.helpers";
-import Input from "~/components/atoms/Input/Input";
-import { toPersianDigit } from "~/shared/utils/helpers";
 import FormField from "../FormField";
+import { formatCellphoneNumber, removeNonNumericCharacters } from "../FormField.helpers";
 import { type FormFieldProps } from "../FormField.types";
 
 const FormFieldCellphoneNumber = (props: FormFieldProps) => {
@@ -37,7 +33,7 @@ const FormFieldCellphoneNumber = (props: FormFieldProps) => {
         name={props.name}
         dir="ltr"
         className={fieldState.error && "form-field--has-error"}
-        value={toPersianDigit(value)}
+        value={value}
         onChange={onChange}
       />
     </FormField>

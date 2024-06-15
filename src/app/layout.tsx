@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   const cookieStore = cookies();
-  const theme = cookieStore.get(Cookie.THEME)?.value ?? "light";
+  const theme = cookieStore.get(Cookie.THEME)?.value ?? "dark";
 
   return (
     <html lang="en" dir="ltr" className={theme} data-theme={theme}>

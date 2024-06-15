@@ -4,7 +4,7 @@ const HelperText = (props: PropsWithChildren) => {
   const { children } = props;
 
   return (
-    <div className="dig-prose-label4 text-dig-text-secondary">
+    <div className="rp-prose-label4 text-rp-text-secondary">
       <strong>Guide:</strong> {children}
     </div>
   );
