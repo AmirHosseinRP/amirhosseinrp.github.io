@@ -1,4 +1,3 @@
-import withMDX from "@next/mdx";
 import withPWA from "next-pwa";
 
 const withPWAConfig = withPWA({
@@ -13,6 +12,7 @@ const nextConfig = {
   experimental: {
     serviceWorker: true,
     webpackBuildWorker: true,
+    isrMemoryCacheSize: 0,
     mdxRs: true,
   },
   httpAgentOptions: {
@@ -20,4 +20,4 @@ const nextConfig = {
   },
 };
 
-export default withPWAConfig(withMDX(nextConfig));
+export default withPWAConfig(nextConfig);
