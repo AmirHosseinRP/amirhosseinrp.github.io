@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+  transition: background-color ease-in-out 0.4s;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-secondary);
+  color: var(--prose-primary);
+  overflow-x: hidden;
+}
+
+.root-layout {
+  @apply h-dvh max-h-dvh overflow-hidden;
+  @apply flex flex-col gap-4;
+}
+
+* {
+  /* :::: for firefox :::: */
+  scrollbar-width: none;
+}
+
+/* :::: for chrome :::: */
+*::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: transparent;
+}
