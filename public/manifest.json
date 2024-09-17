@@ -1,0 +1,48 @@
+{
+  "id": "Rezapanah",
+  "short_name": "Rezapanah",
+  "name": "Rezapanah",
+  "lang": "en",
+  "description": "Amirhossein Rezapanah Portfolio",
+  "start_url": "/",
+  "scope": "/",
+  "dir": "lrt",
+  "theme_color": "#1685c5",
+  "background_color": "#f5f7fa",
+  "display": "standalone",
+  "orientation": "portrait",
+  "prefer_related_applications": false,
+  "categories": ["portfolio"],
+  "icons": [
+    {
+      "src": "/icons/android-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/android-chrome-maskable-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/android-chrome-maskable-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
