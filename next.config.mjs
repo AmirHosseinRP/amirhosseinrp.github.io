@@ -1,3 +1,4 @@
+import withMDX from "@next/mdx";
 import withPWA from "next-pwa";
 
 const withPWAConfig = withPWA({
@@ -6,18 +7,16 @@ const withPWAConfig = withPWA({
   skipWaiting: true,
 });
 
-/** @type {import("next").NextConfig} */
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   experimental: {
-    serviceWorker: true,
-    webpackBuildWorker: true,
-    isrMemoryCacheSize: 0,
     mdxRs: true,
   },
   httpAgentOptions: {
     keepAlive: true,
   },
+  pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
 };
 
-export default withPWAConfig(nextConfig);
+export default withPWAConfig(withMDX(nextConfig));
