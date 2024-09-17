@@ -41,6 +41,7 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
     <html lang="en" dir="rtl" className={theme} data-theme={theme}>
       <head>
         <meta name="android.support.customtabs.trusted.DEFAULT_URL" content="https://amirhosseinrp.github.io" />
+        <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#603cba"></link>
       </head>
 
       <body className={inter.className}>
