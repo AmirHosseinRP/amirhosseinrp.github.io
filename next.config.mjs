@@ -1,12 +1,30 @@
-// const withPWAConfig = withPWA({
-//   dest: "public",
-//   register: true,
-//   skipWaiting: true,
-// });
+import withMDX from "@next/mdx";
+import withPWA from "next-pwa";
+
+const withPWAConfig = withPWA({
+  dest: "public",
+  register: true,
+  skipWaiting: true,
+});
+
+const isGithubActions = process.env.GITHUB_ACTIONS || false;
+
+let assetPrefix = "";
+let basePath = "";
+
+if (isGithubActions) {
+  const repo = process.env.GITHUB_REPOSITORY.replace(/.*?\//, "");
+
+  assetPrefix = `/${repo}/`;
+  basePath = `/${repo}`;
+}
 
 /** @type {import("next").NextConfig} */
 const nextConfig = {
+  output: "export",
   reactStrictMode: true,
+  assetPrefix: assetPrefix,
+  basePath: basePath,
   experimental: {
     serviceWorker: true,
     webpackBuildWorker: true,
@@ -18,5 +36,4 @@ const nextConfig = {
   },
 };
 
-// export default withPWAConfig(withMDX(nextConfig));
-export default nextConfig;
+export default withPWAConfig(withMDX(nextConfig));
