@@ -1,15 +1,11 @@
-import withMDX from "@next/mdx";
-import withPWA from "next-pwa";
-
-const withPWAConfig = withPWA({
-  dest: "public",
-  register: true,
-  skipWaiting: true,
-});
+// const withPWAConfig = withPWA({
+//   dest: "public",
+//   register: true,
+//   skipWaiting: true,
+// });
 
 /** @type {import("next").NextConfig} */
 const nextConfig = {
-  output: "export",
   reactStrictMode: true,
   experimental: {
     serviceWorker: true,
@@ -22,4 +18,5 @@ const nextConfig = {
   },
 };
 
-export default withPWAConfig(withMDX(nextConfig));
+// export default withPWAConfig(withMDX(nextConfig));
+export default nextConfig;
