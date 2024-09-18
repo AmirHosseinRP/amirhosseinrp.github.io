@@ -9,7 +9,8 @@ const withPWAConfig = withPWA({
 
 /** @type {import("next").NextConfig} */
 const nextConfig = {
-  basePath: "amirhosseinrp.github.io",
+  basePath: "/amirhosseinrp.github.io",
+  output: "export",
   reactStrictMode: true,
   experimental: {
     serviceWorker: true,
