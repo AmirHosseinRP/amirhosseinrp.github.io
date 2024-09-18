@@ -11,6 +11,7 @@ const withPWAConfig = withPWA({
 const nextConfig = {
   output: "export",
   distDir: "out",
+  trailingSlash: true,
   reactStrictMode: true,
   experimental: {
     serviceWorker: true,
