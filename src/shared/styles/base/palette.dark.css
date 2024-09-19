@@ -1,0 +1,102 @@
+html.dark,
+html[data-theme="dark"] {
+  /**
+   * :::: background colors ::::
+   */
+  --bg-primary: #18181B;
+  --bg-secondary: #242431;
+  --bg-tertiary: #212124;
+  --bg-dialog: #000000;
+
+  /**
+   * :::: prose colors ::::
+   */
+  --prose-primary: #f6f6f6;
+  --prose-secondary: #6d6d6d;
+  --prose-hint: #5d5d5d;
+  --prose-disabled: #5d5d5d;
+  --prose-inverse: #fafafa;
+  --prose-link: #0C8CE9;
+  --prose-white: #FFFFFF;
+  --prose-brand: #092C44;
+  --prose-info: #FFFFFF;
+  --prose-success: #FFFFFF;
+  --prose-warning: #FFFFFF;
+  --prose-critical: #FFFFFF;
+
+  /**
+   * :::: brand ::::
+   */
+  --brand: #092C44;
+  --brand-hover: #0C3B5A;
+  --brand-active: #0C3B5A;
+  --brand-light: #1685C5;
+  --brand-light-hover: #147CB8;
+  --brand-light-active: #147CB8;
+
+  /**
+   * :::: info ::::
+   */
+  --info: #209cd7;
+  --info-hover: #41abdd;
+  --info-active: #58b5e1;
+  --info-light: #23313a;
+  --info-light-hover: #233d4c;
+  --info-light-active: #23546f;
+
+  /**
+   * :::: success ::::
+   */
+  --success: #34cb5a;
+  --success-hover: #52d373;
+  --success-active: #67d883;
+  --success-light: #25352e;
+  --success-light-hover: #274733;
+  --success-light-active: #2b673d;
+
+  /**
+   * :::: warning ::::
+   */
+  --warning: #ff9500;
+  --warning-hover: #ffa526;
+  --warning-active: #ffb040;
+  --warning-light: #393025;
+  --warning-light-hover: #503c21;
+  --warning-light-active: #7c5219;
+
+  /**
+   * :::: critical ::::
+   */
+  --critical: #f0493d;
+  --critical-hover: #f2645a;
+  --critical-active: #f4776e;
+  --critical-light: #38282b;
+  --critical-light-hover: #4d2d2d;
+  --critical-light-active: #763331;
+
+  /**
+   * :::: gray palette ::::
+   */
+  --dig-gray-50: #1e1e1e;
+  --dig-gray-100: #3d3d3d;
+  --dig-gray-200: #454545;
+  --dig-gray-300: #4f4f4f;
+  --dig-gray-400: #5d5d5d;
+  --dig-gray-500: #6d6d6d;
+  --dig-gray-600: #888888;
+  --dig-gray-700: #b0b0b0;
+  --dig-gray-800: #d1d1d1;
+  --dig-gray-900: #e7e7e7;
+  --dig-gray-950: #f6f6f6;
+
+  /**
+   * :::: shadows ::::
+   */
+  --dig-shadow-xs: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  --dig-shadow-sm: 0px 1px 2px 0px rgba(16, 24, 40, 0.06), 0px 1px 3px 0px rgba(16, 24, 40, 0.10);
+  --dig-shadow-md: 0px 2px 4px 0px rgba(16, 24, 40, 0.06), 0px 4px 8px -2px rgba(16, 24, 40, 0.10);
+  --dig-shadow-lg: 0px 4px 6px -2px rgba(16, 24, 40, 0.03), 0px 12px 16px -4px rgba(16, 24, 40, 0.08);
+  --dig-shadow-xl: 0px 8px 8px -4px rgba(16, 24, 40, 0.03), 0px 20px 24px -4px rgba(16, 24, 40, 0.08);
+  --dig-shadow-2xl: 0px 24px 48px -12px rgba(0, 0, 0, 0.5);
+  --dig-shadow-3xl: 0px 32px 64px -12px rgba(16, 24, 40, 0.14);
+}

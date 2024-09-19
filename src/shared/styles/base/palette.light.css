@@ -1,0 +1,123 @@
+:root {
+  /**
+   * :::: background colors ::::
+   */
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F5F7FA;
+  --bg-tertiary: #F2F2F7;
+  --bg-dialog: #F5F7FA;
+
+  /**
+   * :::: prose colors ::::
+   */
+  --prose-primary: #1E1E1E;
+  --prose-secondary: #6D6D6D;
+  --prose-hint: #888888;
+  --prose-disabled: #888888;
+  --prose-inverse: #F6F6F6;
+  --prose-link: #0C8CE9;
+  --prose-white: #FFFFFF;
+  --prose-brand: #1685C5;
+  --prose-info: #FFFFFF;
+  --prose-success: #FFFFFF;
+  --prose-warning: #FFFFFF;
+  --prose-critical: #FFFFFF;
+
+  /**
+   * :::: brand ::::
+   */
+  --brand: #1685C5;
+  --brand-hover: #0255A6;
+  --brand-active: #02417E;
+  --brand-light: #E9EEF5;
+  --brand-light-hover: #DEE5F0;
+  --brand-light-active: #DEE5F0;
+
+  /**
+   * :::: info ::::
+   */
+  --info: #209CD7;
+  --info-hover: #127DB7;
+  --info-active: #106494;
+  --info-light: #F1F9FE;
+  --info-light-hover: #E2F2FC;
+  --info-light-active: #BFE3F8;
+
+  /**
+   * :::: success ::::
+   */
+  --success: #34CB5A;
+  --success-hover: #239A41;
+  --success-active: #1F7A37;
+  --success-light: #F7FDF8;
+  --success-light-hover: #E5FAEA;
+  --success-light-active: #C4F3CF;
+
+  /**
+   * :::: warning ::::
+   */
+  --warning: #FF9500;
+  --warning-hover: #EB7100;
+  --warning-active: #C54D02;
+  --warning-light: #FFFDF5;
+  --warning-light-hover: #FFF4D1;
+  --warning-light-active: #FFE78F;
+
+  /**
+   * :::: critical ::::
+   */
+  --critical: #F0493D;
+  --critical-hover: #DF362A;
+  --critical-active: #C1251A;
+  --critical-light: #FEF6F6;
+  --critical-light-hover: #FEE8E6;
+  --critical-light-active: #FFCFCC;
+
+  /**
+   * :::: gray palette ::::
+   */
+  --dig-gray-50: #F6F6F6;
+  --dig-gray-100: #E7E7E7;
+  --dig-gray-200: #D1D1D1;
+  --dig-gray-300: #B0B0B0;
+  --dig-gray-400: #888888;
+  --dig-gray-500: #6D6D6D;
+  --dig-gray-600: #5D5D5D;
+  --dig-gray-700: #4F4F4F;
+  --dig-gray-800: #454545;
+  --dig-gray-900: #3D3D3D;
+  --dig-gray-950: #1E1E1E;
+
+  /**
+   * :::: transparent white colors ::::
+   */
+  --transparent-white-8: #FFFFFF14;
+  --transparent-white-12: #FFFFFF1F;
+  --transparent-white-16: #FFFFFF29;
+  --transparent-white-24: #FFFFFF3D;
+  --transparent-white-32: #FFFFFF52;
+  --transparent-white-48: #FFFFFF7A;
+  --transparent-white-80: #FFFFFFCC;
+
+  /**
+   * :::: transparent black colors ::::
+   */
+  --transparent-black-8: #00000014;
+  --transparent-black-12: #0000001F;
+  --transparent-black-16: #00000029;
+  --transparent-black-24: #0000003D;
+  --transparent-black-32: #00000052;
+  --transparent-black-48: #00000052;
+  --transparent-black-80: #000000CC;
+
+  /**
+   * :::: shadows ::::
+   */
+  --dig-shadow-xs: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  --dig-shadow-sm: 0px 1px 2px 0px rgba(16, 24, 40, 0.06), 0px 1px 3px 0px rgba(16, 24, 40, 0.10);
+  --dig-shadow-md: 0px 2px 4px 0px rgba(16, 24, 40, 0.06), 0px 4px 8px -2px rgba(16, 24, 40, 0.10);
+  --dig-shadow-lg: 0px 4px 6px -2px rgba(16, 24, 40, 0.03), 0px 12px 16px -4px rgba(16, 24, 40, 0.08);
+  --dig-shadow-xl: 0px 8px 8px -4px rgba(16, 24, 40, 0.03), 0px 20px 24px -4px rgba(16, 24, 40, 0.08);
+  --dig-shadow-2xl: 0px 24px 48px -12px rgba(16, 24, 40, 0.18);
+  --dig-shadow-3xl: 0px 32px 64px -12px rgba(16, 24, 40, 0.14);
+}

@@ -1,8 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
-import { cookies } from "next/headers";
 import { type ReactNode } from "react";
-import { Cookie } from "~/shared/config/enums";
 
 import Script from "next/script";
 import "react-toastify/dist/ReactToastify.css";
@@ -34,11 +32,8 @@ export const viewport: Viewport = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
-  const cookieStore = cookies();
-  const theme = cookieStore.get(Cookie.THEME as string)?.value ?? "dark";
-
   return (
-    <html lang="en" dir="rtl" className={theme} data-theme={theme}>
+    <html lang="en">
       <head>
         <meta name="android.support.customtabs.trusted.DEFAULT_URL" content="https://amirhosseinrp.github.io" />
         <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#603cba"></link>
@@ -50,6 +45,19 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
         </Layout>
 
         <Script src="/service-worker.register.js" />
+        <Script id="theme-script" strategy="beforeInteractive">
+          {`
+            (function() {
+              function getTheme() {
+                return localStorage.getItem('theme') || 'dark';
+              }
+              
+              var theme = getTheme();
+              document.documentElement.classList.add(theme);
+              document.documentElement.setAttribute('data-theme', theme);
+            })();
+          `}
+        </Script>
       </body>
     </html>
   );

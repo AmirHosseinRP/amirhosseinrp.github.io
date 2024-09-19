@@ -1,6 +1,6 @@
 @import "./base/reset.css";
-/* @import "./base/palette.light.css";
-@import "./base/palette.dark.css"; */
+@import "./base/palette.light.css";
+@import "./base/palette.dark.css";
 
 @tailwind base;
 @tailwind components;

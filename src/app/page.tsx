@@ -1,3 +1,10 @@
+import ThemeToggle from "~/components/atoms/ThemeToggle/ThemeToggle";
+
 export default function Home() {
-  return <>Amirhossein Rp</>;
+  return (
+    <>
+      <div className="bg-primary">Amirhossein Rezapanah</div>
+      <ThemeToggle />
+    </>
+  );
 }
