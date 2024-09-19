@@ -9,19 +9,18 @@ const withPWAConfig = withPWA({
 
 /** @type {import("next").NextConfig} */
 const nextConfig = {
-  output: "export",
-  distDir: "out",
   trailingSlash: true,
-  reactStrictMode: true,
-  experimental: {
-    serviceWorker: true,
-    webpackBuildWorker: true,
-    isrMemoryCacheSize: 0,
-    mdxRs: true,
-  },
-  httpAgentOptions: {
-    keepAlive: true,
-  },
+  output: "export",
+  // reactStrictMode: true,
+  // experimental: {
+  //   serviceWorker: true,
+  //   webpackBuildWorker: true,
+  //   isrMemoryCacheSize: 0,
+  //   mdxRs: true,
+  // },
+  // httpAgentOptions: {
+  //   keepAlive: true,
+  // },
 };
 
 export default withPWAConfig(withMDX(nextConfig));
