@@ -8,7 +8,11 @@ const ThemeToggle = () => {
     changeTheme();
   }
 
-  return <button onClick={onThemeChange}>change theme</button>;
+  return (
+    <>
+      <button onClick={onThemeChange}>change theme</button>
+    </>
+  );
 };
 
 export default memo(ThemeToggle);

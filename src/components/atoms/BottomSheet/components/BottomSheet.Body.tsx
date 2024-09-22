@@ -11,7 +11,7 @@ const BottomSheetBody = (props: PropsWithChildren<Props>) => {
     <div
       id="bottom-sheet-body"
       className={clsx(
-        "bg-blue-800 safe-area-inset overflow-scroll md:rounded-b-2xl",
+        "bg-primary safe-area-inset overflow-scroll md:rounded-b-2xl",
         styles["bottom-sheet-body"],
         props.className
       )}

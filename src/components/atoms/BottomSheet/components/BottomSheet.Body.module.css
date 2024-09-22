@@ -1,4 +1,4 @@
 .bottom-sheet-body {
-  padding: 1rem 1rem calc(1rem + env(safe-area-inset-bottom));
+  padding: 0 1rem calc(1rem + env(safe-area-inset-bottom));
   max-height: calc(100dvh - 48px);
 }

@@ -96,6 +96,7 @@ const config: Config = {
         secondary: "var(--bg-secondary)",
         tertiary: "var(--bg-tertiary)",
         dialog: "var(--bg-dialog)",
+        highlight: "var(--bg-highlight)",
       },
       boxShadow: {
         "dig-shadow-xs": "var(--dig-shadow-xs)",
