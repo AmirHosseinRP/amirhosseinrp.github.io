@@ -18,10 +18,7 @@ const TestSection = () => {
           jdslorem;lkasjdfa sdalk j;laskd fklasd ;lkjd f; lajsd;lfkasd;l jds lorem;lkasjdfa sdalk j;laskd fklasd ;lkjd
           f; lajsd;lfkasd;l jdslorem;lkasjdfa sdalk j;laskd fklasd ;lkjd f; lajsd;lfkasd;l jds lorem;lkasjdfa sdalk
           j;laskd fklasd ;lkjd f; lajsd;lfkasd;l jdskasd;l jdslorem;lkasjdfa sdalk j;laskd fklasd ;lkjd f;
-          lajsd;lfkasd;l jds lorem;lkasjdfa sdalk j;laskd fklasd ;lkjd f; lajsd;lfkasd;l jdslorem;lkasjdfa sdalk j;laskd
-          fklasd ;lkjd f; lajsd;lfkasd;l jds lorem;lkasjdfa sdalk j;laskd fklasd ;lkjd f; lajsd;lfkasd;l jds kasd;l
-          jdslorem;lkasjdfa sdalk j;laskd fklasd ;lkjd f; lajsd;lfkasd;l jds lorem;lkasjdfa sdalk j;laskd fklasd ;lkjd
-          f; lajsd;lfkasd;l jdslorem;lkasjdfa sdalk j;laskd fklasd ;lkjd f; lajsd;lfkasd;l jds lorem;lkasjdfa s
+          lajsd;lfkasd;l jds lorem;lkasjdfa sdalk j;laskd fklasd ;lkjd f; lajsd;lfkasd;l jdslorem;lkasjdfa sdalk
           lajsd;lfkasd;l jds
         </BottomSheet.Body>
       </BottomSheet>

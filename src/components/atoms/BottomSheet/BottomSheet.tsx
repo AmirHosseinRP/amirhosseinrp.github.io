@@ -43,10 +43,10 @@ const BaseBottomSheet = (props: Props) => {
   return (
     <AnimatePresence>
       {props.isOpen && (
-        <div className="fixed inset-0 w-dvw h-dvh flex justify-center items-center z-40 select-none">
+        <div className="fixed inset-0 w-dvw h-dvh flex justify-center items-center z-50">
           <motion.div
             className={clsx(
-              "w-full h-full inset-0 backdrop-blur-sm bg-transparent-black-12 z-50 flex flex-col justify-end md:flex-row md:items-center md:justify-center"
+              "w-full h-full inset-0 backdrop-blur-sm bg-transparent-black-12 z-[60] flex flex-col justify-end md:flex-row md:items-center md:justify-center"
             )}
             onClick={props.onClose}
             initial={{ opacity: 0 }}
@@ -54,9 +54,10 @@ const BaseBottomSheet = (props: Props) => {
             exit={{ opacity: 0 }}
           />
 
-          <motion.div
+          <motion.dialog
+            open={props.isOpen}
             className={clsx(
-              "fixed bottom-0 md:bottom-auto md:p-0 bg-transparent z-[60] mx-auto max-h-dvh md:shadow-dig-shadow-2xl rounded-2xl md:max-w-[36rem]",
+              "fixed bottom-0 md:bottom-auto md:p-0 bg-transparent z-[70] mx-auto max-h-dvh md:shadow-dig-shadow-2xl rounded-2xl md:max-w-[36rem]",
               "animate-slide-in-out md:animate-fade-in-out w-full"
             )}
             drag={window.screen.width < 768 && "y"}
@@ -95,7 +96,7 @@ const BaseBottomSheet = (props: Props) => {
             </div>
 
             {props.children}
-          </motion.div>
+          </motion.dialog>
         </div>
       )}
     </AnimatePresence>
