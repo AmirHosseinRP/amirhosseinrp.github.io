@@ -43,7 +43,7 @@ const BaseBottomSheet = (props: Props) => {
   return (
     <AnimatePresence>
       {props.isOpen && (
-        <div className="fixed inset-0 w-dvw h-dvh flex justify-center items-center z-40">
+        <div className="fixed inset-0 w-dvw h-dvh flex justify-center items-center z-40 select-none">
           <motion.div
             className={clsx(
               "w-full h-full inset-0 backdrop-blur-sm bg-transparent-black-12 z-50 flex flex-col justify-end md:flex-row md:items-center md:justify-center"
