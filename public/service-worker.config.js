@@ -7,12 +7,12 @@ const CACHE_NAME = "my-pwa-cache";
  */
 const OFFLINE_FALLBACK_PAGE = "/offline.html";
 
-const PRE_CACHE_ASSETS = ["/assets/", OFFLINE_FALLBACK_PAGE]
+const PRE_CACHE_ASSETS = ["/assets/", OFFLINE_FALLBACK_PAGE];
 
 /**
  * @description offline support
  */
-self.addEventListener("message", (event) => {
+self.addEventListener("message", event => {
   if (event.data && event.data.type === "SKIP_WAITING") {
     self.skipWaiting();
   }
@@ -22,10 +22,12 @@ self.addEventListener("message", (event) => {
  * @description Listener for the install event - pre-caches our assets list on service worker install.
  */
 self.addEventListener("install", event => {
-  event.waitUntil((async () => {
-    const cache = await caches.open(CACHE_NAME);
-    cache.add(PRE_CACHE_ASSETS);
-  })());
+  event.waitUntil(
+    (async () => {
+      const cache = await caches.open(CACHE_NAME);
+      cache.add(PRE_CACHE_ASSETS);
+    })()
+  );
 });
 
 if (workbox.navigationPreload.isSupported()) {
@@ -37,40 +39,38 @@ if (workbox.navigationPreload.isSupported()) {
  */
 self.addEventListener("activate", event => {
   event.waitUntil(self.clients.claim());
-})
+});
 
 /**
  * @description https://docs.pwabuilder.com/#/home/sw-intro?id=defining-a-fetch-strategy
  */
-self.addEventListener("fetch", (event) => {
+self.addEventListener("fetch", event => {
   if (event.request.mode === "navigate") {
-    event.respondWith((async () => {
-      try {
+    event.respondWith(
+      (async () => {
+        try {
+          const preloadResponse = await event.preloadResponse;
 
-        const preloadResponse = await event.preloadResponse;
+          if (preloadResponse) {
+            return preloadResponse;
+          }
 
-        if (preloadResponse) {
+          const networkResponse = await fetch(event.request);
 
-          return preloadResponse;
+          return networkResponse;
+        } catch (error) {
+          const cache = await caches.open(CACHE);
+
+          const cachedResponse = await cache.match(offlineFallbackPage);
+
+          return cachedResponse;
         }
-
-        const networkResponse = await fetch(event.request);
-
-        return networkResponse;
-      } catch (error) {
-
-        const cache = await caches.open(CACHE);
-
-        const cachedResponse = await cache.match(offlineFallbackPage);
-
-        return cachedResponse;
-      }
-    })());
+      })()
+    );
   }
 });
 
-
-self.addEventListener("push", (event) => {
+self.addEventListener("push", event => {
   event.waitUntil(
     self.registration.showNotification("Notification Title", {
       body: "Notification Body Text",
@@ -79,7 +79,7 @@ self.addEventListener("push", (event) => {
   );
 });
 
-self.addEventListener("notificationclick", (event) => {
+self.addEventListener("notificationclick", event => {
   event.notification.close();
 
   const fullPath = self.location.origin + event.notification.data.path;
