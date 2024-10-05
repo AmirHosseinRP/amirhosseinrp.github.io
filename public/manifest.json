@@ -8,7 +8,7 @@
   "scope": "/",
   "intent_filters": {
     "scope_url_scheme": "https",
-    "scope_url_host": "https://amirhosseinrp.github.io",
+    "scope_url_host": "amirhosseinrp.github.io",
     "scope_url_path": "/"
   },
   "dir": "ltr",
