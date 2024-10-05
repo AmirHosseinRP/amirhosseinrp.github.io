@@ -4,8 +4,13 @@
   "short_name": "Rp.Portfolio",
   "lang": "en",
   "description": "Amirhossein Rezapanah Portfolio",
-  "start_url": "https://amirhosseinrp.github.io",
+  "start_url": "/",
   "scope": "/",
+  "intent_filters": {
+    "scope_url_scheme": "https",
+    "scope_url_host": "https://amirhosseinrp.github.io",
+    "scope_url_path": "/"
+  },
   "dir": "ltr",
   "theme_color": "#333333",
   "background_color": "#333333",
