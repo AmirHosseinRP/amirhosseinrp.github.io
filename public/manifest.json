@@ -13,6 +13,7 @@
   "orientation": "portrait",
   "prefer_related_applications": false,
   "categories": ["portfolio"],
+  "url_handlers": [{ "origin": "https://amirhosseinrp.github.io" }],
   "icons": [
     {
       "src": "/icons/android-192x192.png",

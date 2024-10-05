@@ -1,5 +1,0 @@
-<application>
-    <meta-data
-        android:name="android.support.customtabs.trusted.DEFAULT_URL"
-        android:value="https://amirhosseinrp.github.io" /> 
-</application>
