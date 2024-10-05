@@ -3,7 +3,9 @@
     {
       "manifest": "https://amirhosseinrp.github.io/manifest.json",
       "details": {
-        "paths": ["*"],
+        "paths": [
+          "/*"
+        ],
         "exclude_paths": []
       }
     }
