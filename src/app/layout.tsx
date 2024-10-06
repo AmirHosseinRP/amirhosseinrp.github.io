@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#1685C5",
+  themeColor: "#333333",
   colorScheme: "light dark",
   width: "device-width",
   viewportFit: "cover",
@@ -36,7 +36,8 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
     <html lang="en">
       <head>
         <meta name="android.support.customtabs.trusted.DEFAULT_URL" content="https://amirhosseinrp.github.io" />
-        <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#603cba"></link>
+        <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#333333"></link>
+        <link rel="web-app-origin-association" href="/.well-known/web-app-origin-association"></link>
       </head>
 
       <body className={inter.className}>

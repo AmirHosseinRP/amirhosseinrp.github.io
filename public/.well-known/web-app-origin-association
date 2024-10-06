@@ -5,8 +5,7 @@
       "details": {
         "paths": [
           "/*"
-        ],
-        "exclude_paths": []
+        ]
       }
     }
   ]

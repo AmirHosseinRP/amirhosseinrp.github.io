@@ -59,9 +59,9 @@ self.addEventListener("fetch", event => {
 
           return networkResponse;
         } catch (error) {
-          const cache = await caches.open(CACHE);
+          const cache = await caches.open(CACHE_NAME);
 
-          const cachedResponse = await cache.match(offlineFallbackPage);
+          const cachedResponse = await cache.match(OFFLINE_FALLBACK_PAGE);
 
           return cachedResponse;
         }
