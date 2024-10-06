@@ -6,11 +6,6 @@
   "description": "Amirhossein Rezapanah Portfolio",
   "start_url": "/",
   "scope": "/",
-  "intent_filters": {
-    "scope_url_scheme": "https",
-    "scope_url_host": "amirhosseinrp.github.io",
-    "scope_url_path": "/"
-  },
   "dir": "ltr",
   "theme_color": "#333333",
   "background_color": "#333333",
@@ -18,8 +13,12 @@
   "orientation": "portrait",
   "prefer_related_applications": false,
   "categories": ["portfolio"],
-  "url_handlers": [{ "origin": "https://amirhosseinrp.github.io" }],
-  "handle_links": "preferred",
+  "capture_links": "existing_client_event",
+  "url_handlers": [
+    {
+      "origin": "https://amirhosseinrp.github.io"
+    }
+  ],
   "icons": [
     {
       "src": "/icons/android-192x192.png",

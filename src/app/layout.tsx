@@ -37,6 +37,7 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
       <head>
         <meta name="android.support.customtabs.trusted.DEFAULT_URL" content="https://amirhosseinrp.github.io" />
         <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#333333"></link>
+        <link rel="web-app-origin-association" href="/.well-known/web-app-origin-association"></link>
       </head>
 
       <body className={inter.className}>
