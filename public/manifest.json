@@ -14,11 +14,20 @@
   "prefer_related_applications": false,
   "categories": ["portfolio"],
   "capture_links": "existing_client_event",
+  "shortcuts": [
+    {
+      "name": "Home",
+      "url": "/",
+      "icons": [{ "src": "/icons/home-192x192.png", "sizes": "192x192" }]
+    }
+  ],
+  "handle_links": "preferred",
   "url_handlers": [
     {
       "origin": "https://amirhosseinrp.github.io"
     }
   ],
+  "related_applications": [],
   "icons": [
     {
       "src": "/icons/android-192x192.png",
