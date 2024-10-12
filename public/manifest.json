@@ -23,7 +23,7 @@
     {
       "name": "Home",
       "url": "/",
-      "icons": [{ "src": "/icons/home-192x192.png", "sizes": "192x192" }]
+      "icons": [{ "src": "/icons/android-192x192.png", "sizes": "192x192" }]
     }
   ],
   "handle_links": "preferred",
@@ -32,7 +32,6 @@
       "origin": "https://amirhosseinrp.github.io"
     }
   ],
-  "related_applications": [],
   "icons": [
     {
       "src": "/icons/android-192x192.png",
@@ -63,6 +62,22 @@
       "src": "/icons/apple-touch-icon.png",
       "sizes": "180x180",
       "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/icons/screenshot-cover-3840x2160.png",
+      "sizes": "3840x2160",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "random dino image"
+    },
+    {
+      "src": "/icons/screenshot-cover-700x1244.png",
+      "sizes": "700x1244",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "random dino image mobile"
     }
   ]
 }
