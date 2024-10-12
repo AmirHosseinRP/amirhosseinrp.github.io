@@ -23,7 +23,7 @@
     {
       "name": "Home",
       "url": "/",
-      "icons": [{ "src": "/icons/home-192x192.png", "sizes": "192x192" }]
+      "icons": [{ "src": "/icons/android-192x192.png", "sizes": "192x192" }]
     }
   ],
   "handle_links": "preferred",
