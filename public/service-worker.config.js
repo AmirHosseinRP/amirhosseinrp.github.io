@@ -1,31 +1,23 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js");
 
 const CACHE_NAME = "my-pwa-cache";
-
-/**
- * @description Add whichever assets you want to pre-cache here:
- */
 const OFFLINE_FALLBACK_PAGE = "/offline.html";
 
+// List specific asset files instead of directories
 const PRE_CACHE_ASSETS = ["/assets/", OFFLINE_FALLBACK_PAGE];
 
-/**
- * @description offline support
- */
 self.addEventListener("message", event => {
   if (event.data && event.data.type === "SKIP_WAITING") {
     self.skipWaiting();
   }
 });
 
-/**
- * @description Listener for the install event - pre-caches our assets list on service worker install.
- */
 self.addEventListener("install", event => {
   event.waitUntil(
     (async () => {
       const cache = await caches.open(CACHE_NAME);
-      cache.add(PRE_CACHE_ASSETS);
+      // Use addAll for an array of URLs
+      await cache.addAll(PRE_CACHE_ASSETS);
     })()
   );
 });
@@ -34,43 +26,38 @@ if (workbox.navigationPreload.isSupported()) {
   workbox.navigationPreload.enable();
 }
 
-/**
- * @description https://docs.pwabuilder.com/#/home/sw-intro?id=claiming-clients-during-the-activate-event
- */
 self.addEventListener("activate", event => {
   event.waitUntil(self.clients.claim());
 });
 
-/**
- * @description https://docs.pwabuilder.com/#/home/sw-intro?id=defining-a-fetch-strategy
- */
-self.addEventListener("fetch", event => {
-  if (event.request.mode === "navigate") {
-    event.respondWith(
-      (async () => {
-        try {
-          const preloadResponse = await event.preloadResponse;
-          if (preloadResponse) {
-            return preloadResponse;
-          }
+// Use Workbox for routing
+workbox.routing.registerRoute(
+  ({ request }) => request.mode === "navigate",
+  new workbox.strategies.NetworkFirst({
+    cacheName: CACHE_NAME,
+    plugins: [
+      new workbox.expiration.ExpirationPlugin({
+        maxEntries: 50,
+      }),
+    ],
+  })
+);
 
-          const networkResponse = await fetch(event.request);
-          return networkResponse;
-        } catch (error) {
-          const cache = await caches.open(CACHE_NAME);
-          const cachedResponse = await cache.match(OFFLINE_FALLBACK_PAGE);
-          return cachedResponse;
-        }
-      })()
-    );
+// Fallback to offline page
+workbox.routing.setCatchHandler(async ({ event }) => {
+  if (event.request.mode === "navigate") {
+    return caches.match(OFFLINE_FALLBACK_PAGE);
   }
+  return Response.error();
 });
 
 self.addEventListener("push", event => {
+  const data = event.data.json();
   event.waitUntil(
-    self.registration.showNotification("Notification Title", {
-      body: "Notification Body Text",
-      icon: "custom-notification-icon.png",
+    self.registration.showNotification(data.title, {
+      body: data.body,
+      icon: data.icon || "custom-notification-icon.png",
+      data: { url: data.url }, // Store URL to open on click
     })
   );
 });
@@ -78,7 +65,22 @@ self.addEventListener("push", event => {
 self.addEventListener("notificationclick", event => {
   event.notification.close();
 
-  const fullPath = self.location.origin + event.notification.data.path;
+  const url = event.notification.data.url || "/";
+  const fullPath = new URL(url, self.location.origin).href;
 
-  clients.openWindow(fullPath);
+  event.waitUntil(
+    clients.matchAll({ type: "window" }).then(windowClients => {
+      // Check if there is already a window/tab open with the target URL
+      for (var i = 0; i < windowClients.length; i++) {
+        var client = windowClients[i];
+        if (client.url === fullPath && "focus" in client) {
+          return client.focus();
+        }
+      }
+      // If no window/tab is already open, open a new one
+      if (clients.openWindow) {
+        return clients.openWindow(fullPath);
+      }
+    })
+  );
 });
