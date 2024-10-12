@@ -44,27 +44,27 @@ self.addEventListener("activate", event => {
 /**
  * @description https://docs.pwabuilder.com/#/home/sw-intro?id=defining-a-fetch-strategy
  */
-// self.addEventListener("fetch", event => {
-//   if (event.request.mode === "navigate") {
-//     event.respondWith(
-//       (async () => {
-//         try {
-//           const preloadResponse = await event.preloadResponse;
-//           if (preloadResponse) {
-//             return preloadResponse;
-//           }
+self.addEventListener("fetch", event => {
+  if (event.request.mode === "navigate") {
+    event.respondWith(
+      (async () => {
+        try {
+          const preloadResponse = await event.preloadResponse;
+          if (preloadResponse) {
+            return preloadResponse;
+          }
 
-//           const networkResponse = await fetch(event.request);
-//           return networkResponse;
-//         } catch (error) {
-//           const cache = await caches.open(CACHE_NAME);
-//           const cachedResponse = await cache.match(OFFLINE_FALLBACK_PAGE);
-//           return cachedResponse;
-//         }
-//       })()
-//     );
-//   }
-// });
+          const networkResponse = await fetch(event.request);
+          return networkResponse;
+        } catch (error) {
+          const cache = await caches.open(CACHE_NAME);
+          const cachedResponse = await cache.match(OFFLINE_FALLBACK_PAGE);
+          return cachedResponse;
+        }
+      })()
+    );
+  }
+});
 
 self.addEventListener("push", event => {
   event.waitUntil(
