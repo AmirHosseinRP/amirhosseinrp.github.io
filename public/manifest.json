@@ -66,11 +66,18 @@
   ],
   "screenshots": [
     {
-      "src": "screenshot-cover-5120x2880.png",
+      "src": "/icons/screenshot-cover-5120x2880.png",
       "sizes": "5120x2880",
       "type": "image/png",
       "form_factor": "wide",
       "label": "random dino image"
+    },
+    {
+      "src": "/icons/screenshot-cover-700x1244.png",
+      "sizes": "700x1244",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "random dino image mobile"
     }
   ]
 }
