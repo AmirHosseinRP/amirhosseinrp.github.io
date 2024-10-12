@@ -63,5 +63,14 @@
       "sizes": "180x180",
       "type": "image/png"
     }
+  ],
+  "screenshots": [
+    {
+      "src": "screenshot-cover-5120x2880.png",
+      "sizes": "5120x2880",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "random dino image"
+    }
   ]
 }
