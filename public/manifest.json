@@ -66,8 +66,8 @@
   ],
   "screenshots": [
     {
-      "src": "/icons/screenshot-cover-5120x2880.png",
-      "sizes": "5120x2880",
+      "src": "/icons/screenshot-cover-3840x2160.png",
+      "sizes": "3840x2160",
       "type": "image/png",
       "form_factor": "wide",
       "label": "random dino image"
