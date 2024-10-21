@@ -1,6 +1,7 @@
 import Link from "next/link";
 import ThemeToggle from "~/components/atoms/ThemeToggle/ThemeToggle";
 import TestSection from "~/components/TestSection/TestSection";
+import Eye from "~/ui/Eye/Eye";
 
 export default function Home() {
   return (
@@ -18,6 +19,12 @@ export default function Home() {
       <br />
 
       <TestSection />
+
+      {/* <CursorMotion speed={2}>
+        <div className="w-28 h-28 bg-blue-600 rounded-full" />
+      </CursorMotion> */}
+
+      <Eye />
     </>
   );
 }
