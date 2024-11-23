@@ -1,7 +1,8 @@
+import dynamic from "next/dynamic";
 import Link from "next/link";
 import ThemeToggle from "~/components/atoms/ThemeToggle/ThemeToggle";
 import TestSection from "~/components/TestSection/TestSection";
-import Eye from "~/ui/Eye/Eye";
+const Eye = dynamic(async () => await import("~/ui/Eye/Eye"), { ssr: false });
 
 export default function Home() {
   return (

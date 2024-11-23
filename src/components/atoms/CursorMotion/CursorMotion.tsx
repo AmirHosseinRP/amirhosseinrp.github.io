@@ -32,9 +32,9 @@ const CursorMotion = (props: Props) => {
 
   return (
     <motion.div
-      drag={window.screen.width < 768}
+      drag={window.screen.width > 768}
       ref={ref}
-      style={window.screen.width < 768 ? { x, y, transition: `transform ${props.duration}s ease-out` } : {}}
+      style={window.screen.width > 768 ? { x, y, transition: `transform ${props.duration}s ease-out` } : {}}
       className="w-fit h-fit"
     >
       {props.children}
