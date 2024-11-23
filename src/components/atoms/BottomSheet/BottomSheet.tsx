@@ -18,7 +18,7 @@ const BaseBottomSheet = (props: Props) => {
   const rightKnobRef = useRef<HTMLDivElement>(null);
   const leftKnobRef = useRef<HTMLDivElement>(null);
 
-  const onDrag = (event: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
+  const onDrag = (_event: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
     if (rightKnobRef.current && leftKnobRef.current) {
       if (info.velocity.y > 0) {
         rightKnobRef.current.style.transform = "rotate(12deg)";
@@ -30,7 +30,7 @@ const BaseBottomSheet = (props: Props) => {
     }
   };
 
-  const onDragEnd = (event: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
+  const onDragEnd = (_event: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
     if (rightKnobRef.current && leftKnobRef.current) {
       rightKnobRef.current.style.transform = "rotate(0)";
       leftKnobRef.current.style.transform = "rotate(0)";
