@@ -18,77 +18,41 @@ const Eye = () => {
   const delay = 0.2;
 
   const ref = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   return (
     <>
-      <CursorMotion
-        durations={[
-          delay * 4,
-          delay * 3.75,
-          delay * 3.5,
-          delay * 3.25,
-          delay * 3.5,
-          delay * 2,
-          delay * 2.5,
-          delay * 3,
-          delay * 1.5,
-          delay,
-          0,
-        ]}
-        ref={ref}
-      >
-        <Eyelash1 />
-        <Eyelash2 />
-        <Eyelash3 />
-        <Eyelash4 />
-        <Eyelash5 />
-        <Iris />
-        <IrisBorder />
-        <Eyelid />
-        <PupilBorder />
-        <Pupil />
-        <BlueCross />
-      </CursorMotion>
-
-      {/* <CursorMotion duration={delay * 3.75}>
-        <Eyelash2 />
-      </CursorMotion>
-
-      <CursorMotion duration={delay * 3.5}>
-        <Eyelash3 />
-      </CursorMotion>
-
-      <CursorMotion duration={delay * 3.25}>
-        <Eyelash4 />
-      </CursorMotion>
-
-      <CursorMotion duration={delay * 3.5}>
-        <Eyelash5 />
-      </CursorMotion>
-
-      <CursorMotion duration={delay * 2}>
-        <Iris />
-      </CursorMotion>
-
-      <CursorMotion duration={delay * 2.5}>
-        <IrisBorder />
-      </CursorMotion>
-
-      <CursorMotion duration={delay * 3}>
-        <Eyelid />
-      </CursorMotion>
-
-      <CursorMotion duration={delay * 1.5}>
-        <PupilBorder />
-      </CursorMotion>
-
-      <CursorMotion duration={delay}>
-        <Pupil />
-      </CursorMotion>
-
-      <CursorMotion duration={0}>
-        <BlueCross />
-      </CursorMotion> */}
+      <div className="fixed inset-0" ref={containerRef}>
+        <CursorMotion
+          durations={[
+            delay * 4,
+            delay * 3.75,
+            delay * 3.5,
+            delay * 3.25,
+            delay * 3.5,
+            delay * 2,
+            delay * 2.5,
+            delay * 3,
+            delay * 1.5,
+            delay,
+            0,
+          ]}
+          ref={ref}
+          containerRef={containerRef}
+        >
+          <Eyelash1 />
+          <Eyelash2 />
+          <Eyelash3 />
+          <Eyelash4 />
+          <Eyelash5 />
+          <Iris />
+          <IrisBorder />
+          <Eyelid />
+          <PupilBorder />
+          <Pupil />
+          <BlueCross />
+        </CursorMotion>
+      </div>
     </>
   );
 };

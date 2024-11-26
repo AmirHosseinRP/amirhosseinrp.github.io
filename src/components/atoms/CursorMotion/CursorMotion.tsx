@@ -2,18 +2,20 @@
 
 import { frame, motion, useMotionValue } from "framer-motion";
 import { forwardRef, memo, type PropsWithChildren, type RefObject, useEffect } from "react";
-import { checkUserDevice, getBrowserName } from "~/shared/utils/helpers";
+import { checkUserDevice } from "~/shared/utils/helpers";
 
 interface Props extends PropsWithChildren {
   durations: number[];
+  containerRef: RefObject<HTMLDivElement>;
 }
 
 const CursorMotion = forwardRef<HTMLDivElement, Props>((props, ref) => {
   const x = useMotionValue(window.innerWidth / 2);
   const y = useMotionValue(window.innerHeight / 2);
 
-  const isMobile =
-    checkUserDevice() === "MOBILE_DEVICE" && (getBrowserName() === "CHROME" || getBrowserName() === "SAFARI");
+  const isMobile = checkUserDevice() === "MOBILE_DEVICE";
+
+  const childrenCount = Array.isArray(props.children) ? props.children.length : 0;
 
   useEffect(() => {
     if (!isMobile) {
@@ -67,10 +69,12 @@ const CursorMotion = forwardRef<HTMLDivElement, Props>((props, ref) => {
   }, [ref, x, y]);
 
   return (
-    <motion.div drag={isMobile} ref={ref} className="w-fit h-fit relative flex justify-center items-center">
+    <motion.div ref={ref} className="w-fit h-fit relative flex justify-center items-center">
       {Array.isArray(props.children)
         ? props.children.map((child, index) => (
             <motion.div
+              drag={isMobile && index === childrenCount - 1}
+              dragConstraints={props.containerRef}
               key={index}
               style={{
                 x,
