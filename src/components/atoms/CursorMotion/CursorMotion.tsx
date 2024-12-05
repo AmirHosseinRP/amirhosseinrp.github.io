@@ -1,29 +1,55 @@
 "use client";
 
 import { frame, motion, useMotionValue } from "framer-motion";
-import { forwardRef, memo, type PropsWithChildren, type RefObject, useEffect } from "react";
+import { memo, type PropsWithChildren, useEffect, useRef } from "react";
 import { checkUserDevice } from "~/shared/utils/helpers";
 
 interface Props extends PropsWithChildren {
-  durations: number[];
-  containerRef: RefObject<HTMLDivElement>;
+  duration: number;
 }
 
-const CursorMotion = forwardRef<HTMLDivElement, Props>((props, ref) => {
+const CursorMotion = (props: Props) => {
+  const ref = useRef<HTMLDivElement>(null);
+
+  const isUserInteracting = useRef(false);
+
   const x = useMotionValue(window.innerWidth / 2);
   const y = useMotionValue(window.innerHeight / 2);
 
   const isMobile = checkUserDevice() === "MOBILE_DEVICE";
 
-  const childrenCount = Array.isArray(props.children) ? props.children.length : 0;
+  useEffect(() => {
+    const radius = Math.min(window.innerWidth, window.innerHeight) / 3;
+    const speed = 2;
+    let angle = 0;
+
+    const centerX = window.innerWidth / 2;
+    const centerY = window.innerHeight / 2;
+
+    const animate = () => {
+      if (!isUserInteracting.current) {
+        angle += (Math.PI * 2) / (60 * speed);
+        const newX = centerX + radius * Math.cos(angle);
+        const newY = centerY + radius * Math.sin(angle);
+
+        x.set(newX - (ref.current?.offsetWidth ?? 0) / 2);
+        y.set(newY - (ref.current?.offsetHeight ?? 0) / 2);
+        requestAnimationFrame(animate);
+      }
+    };
+
+    animate();
+  }, []);
 
   useEffect(() => {
     if (!isMobile) {
-      if (!(ref as RefObject<HTMLDivElement>)?.current) return;
+      if (!ref?.current) return;
 
       const handlePointerMove = ({ clientX, clientY }: MouseEvent) => {
+        isUserInteracting.current = true;
+
         frame.read(() => {
-          const current = (ref as RefObject<HTMLDivElement>).current;
+          const current = ref.current;
           if (current) {
             x.set(clientX - current.offsetLeft - current.offsetWidth / 2);
             y.set(clientY - current.offsetTop - current.offsetHeight / 2);
@@ -39,57 +65,40 @@ const CursorMotion = forwardRef<HTMLDivElement, Props>((props, ref) => {
 
   useEffect(() => {
     if (isMobile) {
-      if (!(ref as RefObject<HTMLDivElement>)?.current) return;
+      if (!ref?.current) return;
 
-      const current = (ref as RefObject<HTMLDivElement>).current;
+      const handleTouchMove = (e: TouchEvent) => {
+        e.preventDefault();
 
-      if (current) {
-        const handleDragStart = (event: DragEvent) => {
-          event.dataTransfer?.setDragImage(new Image(), 0, 0);
-        };
+        isUserInteracting.current = true;
 
-        const handleDrag = (event: DragEvent) => {
-          if (event.clientX === 0 && event.clientY === 0) return;
+        const touch = e.touches[0];
 
-          x.set(event.clientX - current.offsetLeft - current.offsetWidth / 2);
-          y.set(event.clientY - current.offsetTop - current.offsetHeight / 2);
-        };
+        frame.read(() => {
+          const current = ref.current;
+          if (current) {
+            x.set(touch.clientX - current.offsetLeft - current.offsetWidth / 2);
+            y.set(touch.clientY - current.offsetTop - current.offsetHeight / 2);
+          }
+        });
+      };
 
-        current.setAttribute("draggable", "true");
-        current.addEventListener("dragstart", handleDragStart);
-        current.addEventListener("drag", handleDrag);
+      window.addEventListener("touchmove", handleTouchMove, { passive: false });
 
-        return () => {
-          current.removeAttribute("draggable");
-          current.removeEventListener("dragstart", handleDragStart);
-          current.removeEventListener("drag", handleDrag);
-        };
-      }
+      return () => window.removeEventListener("touchmove", handleTouchMove);
     }
-  }, [ref, x, y]);
+  }, [ref]);
 
   return (
-    <motion.div ref={ref} className="w-fit h-fit relative flex justify-center items-center">
-      {Array.isArray(props.children)
-        ? props.children.map((child, index) => (
-            <motion.div
-              drag={isMobile && index === childrenCount - 1}
-              dragConstraints={props.containerRef}
-              key={index}
-              style={{
-                x,
-                y,
-                transition: `transform ${props.durations[index]}s ease-out`,
-              }}
-              className="absolute"
-            >
-              {child}
-            </motion.div>
-          ))
-        : props.children}
+    <motion.div
+      ref={ref}
+      style={{ x, y, transition: `transform ${props.duration}s ease-out` }}
+      className="fixed w-fit h-fit"
+    >
+      {props.children}
     </motion.div>
   );
-});
+};
 
 CursorMotion.displayName = "CursorMotion";
 
