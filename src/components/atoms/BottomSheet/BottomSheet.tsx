@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { AnimatePresence, motion, type PanInfo } from "framer-motion";
+import { AnimatePresence, motion, type PanInfo } from "motion/react";
 import Image from "next/image";
 import { memo, useRef, type MemoExoticComponent, type PropsWithChildren, type ReactNode } from "react";
 import icons from "~/shared/libs/icons";

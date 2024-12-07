@@ -1,6 +1,6 @@
 "use client";
 
-import { frame, motion, useMotionValue } from "framer-motion";
+import { frame, motion, useMotionValue } from "motion/react";
 import { memo, type PropsWithChildren, useEffect, useRef } from "react";
 import { checkUserDevice } from "~/shared/utils/helpers";
 
