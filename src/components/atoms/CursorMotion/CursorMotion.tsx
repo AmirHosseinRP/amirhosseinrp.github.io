@@ -20,7 +20,7 @@ const CursorMotion = (props: Props) => {
 
   useEffect(() => {
     const radius = Math.min(window.innerWidth, window.innerHeight) / 3;
-    const speed = 2;
+    const speed = 4;
     let angle = 0;
 
     const centerX = window.innerWidth / 2;

@@ -1,6 +1,6 @@
 import { memo } from "react";
 
-const Eyelid = () => (
+const EyelidBottom = () => (
   <svg
     width="128"
     height="64"
@@ -17,15 +17,7 @@ const Eyelid = () => (
       strokeLinecap="round"
       strokeLinejoin="round"
     />
-    <path
-      d="M4 32.4487C40 -5.37677 92.3 -4.38916 124 32.4487"
-      stroke="white"
-      strokeWidth="8"
-      strokeMiterlimit="10"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
   </svg>
 );
 
-export default memo(Eyelid);
+export default memo(EyelidBottom);
