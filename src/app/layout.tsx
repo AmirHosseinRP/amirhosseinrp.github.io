@@ -33,7 +33,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <head>
         <meta name="android.support.customtabs.trusted.DEFAULT_URL" content="https://amirhosseinrp.github.io" />
         <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#333333"></link>
@@ -46,7 +46,7 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
         </Layout>
 
         <Script src="/service-worker.register.js" />
-        <Script id="theme-script" strategy="beforeInteractive">
+        {/* <Script id="theme-script" strategy="beforeInteractive">
           {`
             (function() {
               function getTheme() {
@@ -58,7 +58,7 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
               document.documentElement.setAttribute('data-theme', theme);
             })();
           `}
-        </Script>
+        </Script> */}
       </body>
     </html>
   );

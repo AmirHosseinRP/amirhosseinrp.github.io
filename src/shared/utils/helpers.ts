@@ -5,6 +5,7 @@ export const checkUserDevice = (): "MOBILE_DEVICE" | "DESKTOP_DEVICE" => {
 };
 
 type BrowserType = "OPERA" | "EDGE" | "CHROME" | "SAFARI" | "FIREFOX" | undefined;
+
 export const getBrowserName = (): BrowserType | null => {
   const browserInfo = navigator.userAgent;
   let browser: BrowserType;
