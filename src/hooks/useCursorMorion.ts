@@ -53,7 +53,6 @@ export const useCursorMotion = (params: UseCursorMotionParams): UseCursorMotionR
     }
   }, []);
 
-  // Desktop pointer movement
   useEffect(() => {
     if (isMobile || !ref?.current) return;
 
@@ -73,7 +72,6 @@ export const useCursorMotion = (params: UseCursorMotionParams): UseCursorMotionR
     return () => window.removeEventListener("pointermove", handlePointerMove);
   }, [ref]);
 
-  // Mobile touch movement
   useEffect(() => {
     if (!isMobile || !ref?.current) return;
 

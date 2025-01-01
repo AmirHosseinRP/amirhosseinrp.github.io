@@ -9,7 +9,7 @@ interface Props {
   secondaryChildren: ReactNode;
 }
 
-const CursorContent = (props: Props) => {
+const HoverReveal = (props: Props) => {
   const { ref, style } = useCursorMotion({ duration: 0 });
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -50,4 +50,4 @@ const CursorContent = (props: Props) => {
   );
 };
 
-export default memo(CursorContent);
+export default memo(HoverReveal);
