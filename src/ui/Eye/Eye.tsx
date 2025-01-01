@@ -1,7 +1,7 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { memo } from "react";
-import CursorMotion from "~/components/atoms/CursorMotion/CursorMotion";
 import BlueCross from "~/ui/(icons)/BlueCross";
 import Eyelash1 from "~/ui/(icons)/Eyelash1";
 import Eyelash2 from "~/ui/(icons)/Eyelash2";
@@ -14,6 +14,8 @@ import IrisBorder from "~/ui/(icons)/IrisBorder";
 import Pupil from "~/ui/(icons)/Pupil";
 import PupilBorder from "~/ui/(icons)/PupilBorder";
 import EyelidBottom from "../(icons)/EyelidBottom";
+
+const CursorMotion = dynamic(async () => await import("~/components/atoms/CursorMotion/CursorMotion"), { ssr: false });
 
 const Eye = () => {
   const delay = 0.2;
