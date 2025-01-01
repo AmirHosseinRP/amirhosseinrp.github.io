@@ -14,6 +14,18 @@ export const metadata: Metadata = {
   title: "Amirhossein Rezapanah",
   description: "My portfolio web application",
   manifest: "/manifest.json",
+  appleWebApp: {
+    capable: true,
+    title: "Rezapanah",
+    statusBarStyle: "black-translucent",
+    startupImage: [
+      "/assets/startup/apple-touch-startup-image-768x1004.png",
+      {
+        url: "/assets/startup/apple-touch-startup-image-1536x2008.png",
+        media: "(device-width: 768px) and (device-height: 1024px)",
+      },
+    ],
+  },
   openGraph: {
     title: "Amirhossein Rezapanah",
     description: "My portfolio web application",
@@ -40,7 +52,7 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
         <link rel="web-app-origin-association" href="/.well-known/web-app-origin-association"></link>
       </head>
 
-      <body className={inter.className}>
+      <body className={inter.className} suppressHydrationWarning>
         <Layout>
           <ConfigProvider>{children}</ConfigProvider>
         </Layout>
