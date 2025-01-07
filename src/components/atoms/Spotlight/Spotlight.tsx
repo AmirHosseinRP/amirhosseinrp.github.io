@@ -1,99 +1,77 @@
 "use client";
 
-import { type ReactNode, useEffect, useRef } from "react";
-import CursorMotion from "../CursorMotion/CursorMotion";
+import { animate, AnimatePresence, motion, useMotionTemplate, useMotionValue } from "motion/react";
+import dynamic from "next/dynamic";
+import { useEffect, useState, type ReactNode } from "react";
 
-interface CursorPosition {
-  x: number;
-  y: number;
-}
+const CursorMotion = dynamic(async () => await import("~/components/atoms/CursorMotion/CursorMotion"), { ssr: false });
 
 interface Props {
   primaryContent: ReactNode;
   hoverContent: ReactNode;
 }
 
-const Spotlight = (props: Props) => {
-  const hoveredRef = useRef<boolean>(false);
-  const clipPathElement = useRef<HTMLDivElement | null>(null);
-  const animationFrameId = useRef<number | null>(null);
-  const cursorPosition = useRef<CursorPosition>({ x: 0, y: 0 });
-  const cursorCircleRef = useRef<HTMLDivElement | null>(null);
-
-  const showHidden = (): void => {
-    if (!hoveredRef.current) {
-      hoveredRef.current = true;
-
-      if (cursorCircleRef.current) {
-        cursorCircleRef.current.style.width = "300px";
-        cursorCircleRef.current.style.height = "300px";
-      }
-    }
-  };
-
-  const hideText = (): void => {
-    if (hoveredRef.current) {
-      hoveredRef.current = false;
-
-      if (cursorCircleRef.current) {
-        cursorCircleRef.current.style.width = "0";
-        cursorCircleRef.current.style.height = "0";
-      }
-    }
-  };
-
-  const setCursor = (e: MouseEvent): void => {
-    cursorPosition.current = { x: e.clientX, y: e.clientY };
-
-    if (clipPathElement.current) {
-      if (hoveredRef.current) {
-        clipPathElement.current.style.clipPath = `circle(150px at ${cursorPosition.current.x}px ${cursorPosition.current.y + window.scrollY}px)`;
-      } else {
-        clipPathElement.current.style.clipPath = "circle(0px)";
-      }
-    }
-
-    if (animationFrameId.current) {
-      cancelAnimationFrame(animationFrameId.current);
-    }
-  };
+const HoverReveal = (props: Props) => {
+  const [size] = useState<{ width: number; height: number } | undefined>(undefined);
+  const maskX = useMotionValue(0);
+  const maskY = useMotionValue(0);
+  const maskSize = useMotionValue(0);
+  const maskImage = useMotionTemplate`radial-gradient(circle at ${maskX}px ${maskY}px, black 0px, black ${maskSize}px, transparent ${maskSize}px)`;
+  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
-    const handleMouseMove = (e: MouseEvent): void => {
-      setCursor(e);
-    };
+    if (!size) return;
 
-    window.addEventListener("mousemove", handleMouseMove);
+    const { width, height } = size;
 
-    return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-      if (animationFrameId.current) {
-        cancelAnimationFrame(animationFrameId.current);
-      }
-    };
-  }, []);
+    void animate(maskSize, Math.sqrt(width * width + height * height));
+    void animate(maskX, width / 2);
+    void animate(maskY, height / 2);
+  }, [size]);
 
   return (
-    <div className="relative w-fit h-fit flex justify-center items-center z-40">
-      <div onMouseOver={showHidden} onMouseOut={hideText} className="absolute inset-0">
-        {props.primaryContent}
-      </div>
+    <div className="relative w-full flex justify-center items-center">
+      {props.primaryContent}
 
       <CursorMotion duration={0}>
-        <div ref={cursorCircleRef} className="bg-[#3990E2] w-0 h-0 rounded-full transition-all duration-300" />
+        <AnimatePresence>
+          {isHovered && (
+            <motion.div
+              className="bg-blue-400 w-[500px] h-[500px] rounded-full"
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0 }}
+              transition={{
+                duration: 0.25,
+              }}
+            />
+          )}
+        </AnimatePresence>
       </CursorMotion>
 
-      <div
-        ref={clipPathElement}
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          clipPath: "circle(0px)",
-        }}
-      >
-        {props.hoverContent}
-      </div>
+      <section className="w-fit absolute inset-0 mx-auto">
+        <motion.div
+          onHoverStart={async () => {
+            setIsHovered(true);
+            if (!size) await animate(maskSize, 250);
+          }}
+          onHoverEnd={async () => {
+            setIsHovered(false);
+            if (!size) await animate(maskSize, 0);
+          }}
+          onPointerMove={e => {
+            if (size) return;
+            const { top, left } = e.currentTarget.getBoundingClientRect();
+            maskX.set(e.clientX - left);
+            maskY.set(e.clientY - top);
+          }}
+          style={{ WebkitMaskImage: maskImage, maskImage }}
+        >
+          {props.hoverContent}
+        </motion.div>
+      </section>
     </div>
   );
 };
 
-export default Spotlight;
+export default HoverReveal;
