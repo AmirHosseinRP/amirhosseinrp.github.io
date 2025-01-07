@@ -22,51 +22,51 @@ const Eye = () => {
 
   return (
     <>
-      <CursorMotion duration={delay * 4}>
+      <CursorMotion duration={delay * 4} primaryMorion>
         <Eyelash1 />
       </CursorMotion>
 
-      <CursorMotion duration={delay * 3.75}>
+      <CursorMotion duration={delay * 3.75} primaryMorion>
         <Eyelash2 />
       </CursorMotion>
 
-      <CursorMotion duration={delay * 3.5}>
+      <CursorMotion duration={delay * 3.5} primaryMorion>
         <Eyelash3 />
       </CursorMotion>
 
-      <CursorMotion duration={delay * 3.25}>
+      <CursorMotion duration={delay * 3.25} primaryMorion>
         <Eyelash4 />
       </CursorMotion>
 
-      <CursorMotion duration={delay * 3.5}>
+      <CursorMotion duration={delay * 3.5} primaryMorion>
         <Eyelash5 />
       </CursorMotion>
 
-      <CursorMotion duration={delay * 3}>
+      <CursorMotion duration={delay * 3} primaryMorion>
         <EyelidBottom />
       </CursorMotion>
 
-      <CursorMotion duration={delay * 2.5}>
+      <CursorMotion duration={delay * 2.5} primaryMorion>
         <IrisBorder />
       </CursorMotion>
 
-      <CursorMotion duration={delay * 2}>
+      <CursorMotion duration={delay * 2} primaryMorion>
         <Iris />
       </CursorMotion>
 
-      <CursorMotion duration={delay * 3}>
+      <CursorMotion duration={delay * 3} primaryMorion>
         <EyelidTop />
       </CursorMotion>
 
-      <CursorMotion duration={delay * 1.5}>
+      <CursorMotion duration={delay * 1.5} primaryMorion>
         <PupilBorder />
       </CursorMotion>
 
-      <CursorMotion duration={delay}>
+      <CursorMotion duration={delay} primaryMorion>
         <Pupil />
       </CursorMotion>
 
-      <CursorMotion duration={0}>
+      <CursorMotion duration={0} primaryMorion>
         <BlueCross />
       </CursorMotion>
     </>

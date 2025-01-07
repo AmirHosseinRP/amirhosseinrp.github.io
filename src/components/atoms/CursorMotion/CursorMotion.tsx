@@ -6,6 +6,7 @@ import { checkUserDevice } from "~/shared/utils/helpers";
 
 interface Props extends PropsWithChildren {
   duration: number;
+  primaryMorion?: boolean;
 }
 
 const CursorMotion = (props: Props) => {
@@ -19,26 +20,28 @@ const CursorMotion = (props: Props) => {
   const isMobile = checkUserDevice() === "MOBILE_DEVICE";
 
   useEffect(() => {
-    const radius = Math.min(window.innerWidth, window.innerHeight) / 3;
-    const speed = 4;
-    let angle = 0;
+    if (props.primaryMorion) {
+      const radius = Math.min(window.innerWidth, window.innerHeight) / 3;
+      const speed = 4;
+      let angle = 0;
 
-    const centerX = window.innerWidth / 2;
-    const centerY = window.innerHeight / 2;
+      const centerX = window.innerWidth / 2;
+      const centerY = window.innerHeight / 2;
 
-    const animate = () => {
-      if (!isUserInteracting.current) {
-        angle += (Math.PI * 2) / (60 * speed);
-        const newX = centerX + radius * Math.cos(angle);
-        const newY = centerY + radius * Math.sin(angle);
+      const animate = () => {
+        if (!isUserInteracting.current) {
+          angle += (Math.PI * 2) / (60 * speed);
+          const newX = centerX + radius * Math.cos(angle);
+          const newY = centerY + radius * Math.sin(angle);
 
-        x.set(newX - (ref.current?.offsetWidth ?? 0) / 2);
-        y.set(newY - (ref.current?.offsetHeight ?? 0) / 2);
-        requestAnimationFrame(animate);
-      }
-    };
+          x.set(newX - (ref.current?.offsetWidth ?? 0) / 2);
+          y.set(newY - (ref.current?.offsetHeight ?? 0) / 2);
+          requestAnimationFrame(animate);
+        }
+      };
 
-    animate();
+      animate();
+    }
   }, []);
 
   useEffect(() => {
@@ -93,7 +96,7 @@ const CursorMotion = (props: Props) => {
     <motion.div
       ref={ref}
       style={{ x, y, transition: `transform ${props.duration}s ease-out` }}
-      className="fixed w-fit h-fit"
+      className="fixed w-fit h-fit pointer-events-none"
     >
       {props.children}
     </motion.div>

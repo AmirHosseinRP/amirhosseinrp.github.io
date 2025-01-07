@@ -1,7 +1,6 @@
 "use client";
 
 import { type PropsWithChildren } from "react";
-import { ToastContainer } from "react-toastify";
 import { SWRConfig } from "swr";
 
 const ConfigProvider = (props: PropsWithChildren) => {
@@ -14,18 +13,6 @@ const ConfigProvider = (props: PropsWithChildren) => {
       }}
     >
       {props.children}
-
-      <ToastContainer
-        position="top-center"
-        theme="dark"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-      />
     </SWRConfig>
   );
 };
