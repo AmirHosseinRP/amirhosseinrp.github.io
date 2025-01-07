@@ -65,6 +65,22 @@ const HoverReveal = (props: Props) => {
             maskX.set(e.clientX - left);
             maskY.set(e.clientY - top);
           }}
+          onTouchStart={async () => {
+            setIsHovered(true);
+            if (!size) await animate(maskSize, 250);
+          }}
+          onTouchEnd={async () => {
+            setIsHovered(false);
+            if (!size) await animate(maskSize, 0);
+          }}
+          onTouchMove={e => {
+            e.preventDefault();
+            if (size) return;
+            const touch = e.touches[0];
+            const { top, left } = e.currentTarget.getBoundingClientRect();
+            maskX.set(touch.clientX - left);
+            maskY.set(touch.clientY - top);
+          }}
           style={{ WebkitMaskImage: maskImage, maskImage }}
         >
           {props.hoverContent}
