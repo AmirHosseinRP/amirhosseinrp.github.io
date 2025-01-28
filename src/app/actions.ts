@@ -1,7 +1,6 @@
 "use client";
 
 export function changeTheme() {
-  // eslint-disable-next-line @typescript-eslint/prefer-nullish-coalescing
   const currentTheme = localStorage.getItem("theme") || "dark";
   const newTheme = currentTheme === "dark" ? "light" : "dark";
 
