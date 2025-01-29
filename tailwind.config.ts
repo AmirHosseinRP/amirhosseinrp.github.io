@@ -6,6 +6,8 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        reverse: "var(--reverse)",
+
         brand: "var(--brand)",
         "brand-hover": "var(--brand-hover)",
         "brand-active": "var(--brand-active)",
@@ -44,17 +46,17 @@ const config: Config = {
         /**
          * :::: gray palette ::::
          */
-        "dig-gray-50": "var(--dig-gray-50)",
-        "dig-gray-100": "var(--dig-gray-100)",
-        "dig-gray-200": "var(--dig-gray-200)",
-        "dig-gray-300": "var(--dig-gray-300)",
-        "dig-gray-400": "var(--dig-gray-400)",
-        "dig-gray-500": "var(--dig-gray-500)",
-        "dig-gray-600": "var(--dig-gray-600)",
-        "dig-gray-700": "var(--dig-gray-700)",
-        "dig-gray-800": "var(--dig-gray-800)",
-        "dig-gray-900": "var(--dig-gray-900)",
-        "dig-gray-950": "var(--dig-gray-950)",
+        "rp-gray-50": "var(--rp-gray-50)",
+        "rp-gray-100": "var(--rp-gray-100)",
+        "rp-gray-200": "var(--rp-gray-200)",
+        "rp-gray-300": "var(--rp-gray-300)",
+        "rp-gray-400": "var(--rp-gray-400)",
+        "rp-gray-500": "var(--rp-gray-500)",
+        "rp-gray-600": "var(--rp-gray-600)",
+        "rp-gray-700": "var(--rp-gray-700)",
+        "rp-gray-800": "var(--rp-gray-800)",
+        "rp-gray-900": "var(--rp-gray-900)",
+        "rp-gray-950": "var(--rp-gray-950)",
 
         /**
          * :::: prose colors ::::
@@ -98,14 +100,17 @@ const config: Config = {
         dialog: "var(--bg-dialog)",
         highlight: "var(--bg-highlight)",
       },
+      backgroundImage: {
+        app: "url('/assets/images/bg-app.webp')",
+      },
       boxShadow: {
-        "dig-shadow-xs": "var(--dig-shadow-xs)",
-        "dig-shadow-sm": "var(--dig-shadow-sm)",
-        "dig-shadow-md": "var(--dig-shadow-md)",
-        "dig-shadow-lg": "var(--dig-shadow-lg)",
-        "dig-shadow-xl": "var(--dig-shadow-xl)",
-        "dig-shadow-2xl": "var(--dig-shadow-2xl)",
-        "dig-shadow-3xl": "var(--dig-shadow-3xl)",
+        "rp-shadow-xs": "var(--rp-shadow-xs)",
+        "rp-shadow-sm": "var(--rp-shadow-sm)",
+        "rp-shadow-md": "var(--rp-shadow-md)",
+        "rp-shadow-lg": "var(--rp-shadow-lg)",
+        "rp-shadow-xl": "var(--rp-shadow-xl)",
+        "rp-shadow-2xl": "var(--rp-shadow-2xl)",
+        "rp-shadow-3xl": "var(--rp-shadow-3xl)",
       },
     },
   },

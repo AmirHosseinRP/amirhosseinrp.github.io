@@ -57,7 +57,7 @@ const BaseBottomSheet = (props: Props) => {
           <motion.dialog
             open={props.isOpen}
             className={clsx(
-              "fixed bottom-0 md:bottom-auto md:p-0 bg-transparent z-[70] mx-auto max-h-dvh md:shadow-dig-shadow-2xl rounded-2xl md:max-w-[36rem]",
+              "fixed bottom-0 md:bottom-auto md:p-0 bg-transparent z-[70] mx-auto max-h-dvh md:shadow-rp-shadow-2xl rounded-2xl md:max-w-[36rem]",
               "animate-slide-in-out md:animate-fade-in-out w-full"
             )}
             drag={window.screen.width < 768 && "y"}
