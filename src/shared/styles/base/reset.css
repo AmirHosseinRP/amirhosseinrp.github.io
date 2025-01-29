@@ -10,33 +10,67 @@ html {
 body {
   background-color: var(--bg-secondary);
   color: var(--prose-primary);
-  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 .root-layout {
   @apply h-dvh max-h-dvh overflow-hidden;
-  @apply flex flex-col gap-4;
+  @apply flex flex-col py-5 sm:py-10;
+  @apply bg-app bg-repeat;
 }
 
-* {
-  /* :::: for firefox :::: */
-  scrollbar-width: none;
+.container-app {
+  width: 90%;
+}
+@media (min-width: 640px) {
+  .container-app {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container-app {
+    max-width: 668px;
+  }
+}
+@media (min-width: 1024px) {
+  .container-app {
+    max-width: 924px;
+  }
+}
+@media (min-width: 1280px) {
+  .container-app {
+    max-width: 1180px;
+  }
+}
+@media (min-width: 1536px) {
+  .container-app {
+    max-width: 1436px;
+  }
 }
 
-/* :::: for chrome :::: */
-*::-webkit-scrollbar {
-  width: 0;
-  height: 0;
+.border-app {
+  position: relative;
+  outline: 3px solid #262626;
+  /* box-shadow: 1px 1px 0px 3px #ffffff; */
 }
 
-*::-webkit-scrollbar-track {
-  background-color: transparent;
+.border-app::before,
+.border-app::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
 }
 
-*::-webkit-scrollbar-thumb {
-  background-color: transparent;
+.border-app::before {
+  border-top: 3px solid #ffffff;
+  border-left: 3px solid #ffffff;
 }
 
-*::-webkit-scrollbar-thumb:hover {
-  background-color: transparent;
+.border-app::after {
+  border-right: 3px solid #26262666;
+  border-bottom: 3px solid #26262666;
 }

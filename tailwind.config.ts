@@ -101,7 +101,7 @@ const config: Config = {
         highlight: "var(--bg-highlight)",
       },
       backgroundImage: {
-        header: "url('/assets/icons/bg-header.svg')",
+        app: "url('/assets/images/bg-app.webp')",
       },
       boxShadow: {
         "rp-shadow-xs": "var(--rp-shadow-xs)",

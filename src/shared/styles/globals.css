@@ -15,6 +15,7 @@
   src: url("../fonts/JetBrainsMono-Bold.woff2") format("woff2");
   font-display: swap;
 }
+
 @font-face {
   font-family: "JetBrainsMono";
   font-weight: 400;
@@ -22,6 +23,7 @@
   src: url("../fonts/JetBrainsMono-Regular.woff2") format("woff2");
   font-display: swap;
 }
+
 * {
   font-family: JetBrainsMono !important;
 }

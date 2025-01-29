@@ -11,18 +11,34 @@ interface Props {
 
 const Header = (props: PropsWithChildren<Props>) => {
   return (
-    <header className="w-full h-auto flex flex-row items-stretch bg-secondary py-0.5 px-2 border-2 border-solid border-reverse">
-      <Image src={icons.headerLeft.src} alt={icons.headerLeft.alt} width={13} height={13} className="mr-2" />
+    <header className="w-full h-10 flex flex-row items-stretch bg-secondary py-0.5 px-1 border-app">
+      <Image src={icons.headerLeft.src} alt={icons.headerLeft.alt} width={30} height={30} className="mr-2" />
 
-      <div className="min-h-full flex-1 bg-header bg-contain bg-center bg-no-repeat mr-3" />
+      <div className="min-h-full flex-1 mr-3 my-0.5 overflow-hidden pt-1">
+        <div className="border-solid border-t-2 border-t-[#999999]" />
+        <div className="border-t-2 border-solid border-t-[#dddddd] border-b-2 border-b-[#999999]" />
+        <div className="border-t-2 border-solid border-t-[#dddddd] border-b-2 border-b-[#999999]" />
+        <div className="border-t-2 border-solid border-t-[#dddddd] border-b-2 border-b-[#999999]" />
+        <div className="border-t-2 border-solid border-t-[#dddddd] border-b-2 border-b-[#999999]" />
+        <div className="border-t-2 border-solid border-t-[#dddddd] border-b-2 border-b-[#999999]" />
+      </div>
 
-      <Typography variant="title1">
+      <Image src={icons.appleLogo.src} alt={icons.appleLogo.alt} width={24} height={24} className="mr-2" />
+
+      <Typography variant="h4" className="h-full flex justify-center items-center">
         {props.isLoading ? <div className="animate-pulse bg-gray-100 rounded-sm h-6 w-28" /> : props.title}
       </Typography>
 
-      <div className="min-h-full flex-1 bg-header bg-contain bg-center bg-no-repeat ml-3" />
+      <div className="min-h-full flex-1 ml-3 my-0.5 overflow-hidden pt-1">
+        <div className="border-solid border-t-2 border-t-[#999999]" />
+        <div className="border-t-2 border-solid border-t-[#dddddd] border-b-2 border-b-[#999999]" />
+        <div className="border-t-2 border-solid border-t-[#dddddd] border-b-2 border-b-[#999999]" />
+        <div className="border-t-2 border-solid border-t-[#dddddd] border-b-2 border-b-[#999999]" />
+        <div className="border-t-2 border-solid border-t-[#dddddd] border-b-2 border-b-[#999999]" />
+        <div className="border-t-2 border-solid border-t-[#dddddd] border-b-2 border-b-[#999999]" />
+      </div>
 
-      <Image src={icons.headerRight.src} alt={icons.headerRight.alt} width={34} height={13} className="ml-2" />
+      <Image src={icons.headerRight.src} alt={icons.headerRight.alt} width={30} height={30} className="ml-2" />
     </header>
   );
 };

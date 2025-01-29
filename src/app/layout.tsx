@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
 import { type ReactNode } from "react";
 
 import Script from "next/script";
@@ -7,8 +6,6 @@ import "react-toastify/dist/ReactToastify.css";
 import Layout from "~/components/atoms/Layout/Layout";
 import ConfigProvider from "~/shared/providers/ConfigProvider/ConfigProvider";
 import "~/shared/styles/globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Amirhossein Rezapanah",
@@ -53,7 +50,7 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
         <link rel="web-app-origin-association" href="/.well-known/web-app-origin-association"></link>
       </head>
 
-      <body className={inter.className} suppressHydrationWarning>
+      <body className="root-layout" suppressHydrationWarning>
         <Layout>
           <ConfigProvider>{children}</ConfigProvider>
         </Layout>
