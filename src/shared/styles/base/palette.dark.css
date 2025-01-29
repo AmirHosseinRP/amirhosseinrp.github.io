@@ -5,6 +5,7 @@ html[data-theme="dark"] {
    */
   --bg-primary: #18181B;
   --bg-secondary: #242431;
+  --bg-reverse: #CCCCCC;
   --bg-tertiary: #212124;
   --bg-dialog: #000000;
   --bg-highlight: #a1a1a1;
@@ -78,26 +79,26 @@ html[data-theme="dark"] {
   /**
    * :::: gray palette ::::
    */
-  --dig-gray-50: #1e1e1e;
-  --dig-gray-100: #3d3d3d;
-  --dig-gray-200: #454545;
-  --dig-gray-300: #4f4f4f;
-  --dig-gray-400: #5d5d5d;
-  --dig-gray-500: #6d6d6d;
-  --dig-gray-600: #888888;
-  --dig-gray-700: #b0b0b0;
-  --dig-gray-800: #d1d1d1;
-  --dig-gray-900: #e7e7e7;
-  --dig-gray-950: #f6f6f6;
+  --rp-gray-50: #1e1e1e;
+  --rp-gray-100: #3d3d3d;
+  --rp-gray-200: #454545;
+  --rp-gray-300: #4f4f4f;
+  --rp-gray-400: #5d5d5d;
+  --rp-gray-500: #6d6d6d;
+  --rp-gray-600: #888888;
+  --rp-gray-700: #b0b0b0;
+  --rp-gray-800: #d1d1d1;
+  --rp-gray-900: #e7e7e7;
+  --rp-gray-950: #f6f6f6;
 
   /**
    * :::: shadows ::::
    */
-  --dig-shadow-xs: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
-  --dig-shadow-sm: 0px 1px 2px 0px rgba(16, 24, 40, 0.06), 0px 1px 3px 0px rgba(16, 24, 40, 0.10);
-  --dig-shadow-md: 0px 2px 4px 0px rgba(16, 24, 40, 0.06), 0px 4px 8px -2px rgba(16, 24, 40, 0.10);
-  --dig-shadow-lg: 0px 4px 6px -2px rgba(16, 24, 40, 0.03), 0px 12px 16px -4px rgba(16, 24, 40, 0.08);
-  --dig-shadow-xl: 0px 8px 8px -4px rgba(16, 24, 40, 0.03), 0px 20px 24px -4px rgba(16, 24, 40, 0.08);
-  --dig-shadow-2xl: 0px 24px 48px -12px rgba(0, 0, 0, 0.5);
-  --dig-shadow-3xl: 0px 32px 64px -12px rgba(16, 24, 40, 0.14);
+  --rp-shadow-xs: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  --rp-shadow-sm: 0px 1px 2px 0px rgba(16, 24, 40, 0.06), 0px 1px 3px 0px rgba(16, 24, 40, 0.10);
+  --rp-shadow-md: 0px 2px 4px 0px rgba(16, 24, 40, 0.06), 0px 4px 8px -2px rgba(16, 24, 40, 0.10);
+  --rp-shadow-lg: 0px 4px 6px -2px rgba(16, 24, 40, 0.03), 0px 12px 16px -4px rgba(16, 24, 40, 0.08);
+  --rp-shadow-xl: 0px 8px 8px -4px rgba(16, 24, 40, 0.03), 0px 20px 24px -4px rgba(16, 24, 40, 0.08);
+  --rp-shadow-2xl: 0px 24px 48px -12px rgba(0, 0, 0, 0.5);
+  --rp-shadow-3xl: 0px 32px 64px -12px rgba(16, 24, 40, 0.14);
 }

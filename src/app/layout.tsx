@@ -44,8 +44,9 @@ export const viewport: Viewport = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
+  //  className="dark" data-theme="dark"
   return (
-    <html lang="en" className="dark" data-theme="dark">
+    <html lang="en">
       <head>
         <meta name="android.support.customtabs.trusted.DEFAULT_URL" content="https://amirhosseinrp.github.io" />
         <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#333333"></link>

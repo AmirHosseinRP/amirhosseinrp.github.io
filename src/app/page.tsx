@@ -1,3 +1,9 @@
+import Header from "~/components/atoms/Header/Header";
+
 export default function Home() {
-  return <></>;
+  return (
+    <>
+      <Header title="hellllo" />
+    </>
+  );
 }
