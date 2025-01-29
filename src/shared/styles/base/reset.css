@@ -10,7 +10,6 @@ html {
 body {
   background-color: var(--bg-secondary);
   color: var(--prose-primary);
-  overflow-y: scroll;
 }
 
 .root-layout {
@@ -51,7 +50,6 @@ body {
 .border-app {
   position: relative;
   outline: 3px solid #262626;
-  /* box-shadow: 1px 1px 0px 3px #ffffff; */
 }
 
 .border-app::before,
