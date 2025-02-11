@@ -102,6 +102,7 @@ const config: Config = {
       },
       backgroundImage: {
         app: "url('/assets/images/bg-app.webp')",
+        button: "url('/assets/images/bg-button.svg')",
       },
       boxShadow: {
         "rp-shadow-xs": "var(--rp-shadow-xs)",

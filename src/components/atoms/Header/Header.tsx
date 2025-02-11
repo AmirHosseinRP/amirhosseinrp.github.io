@@ -16,11 +16,11 @@ const Header = (props: PropsWithChildren<Props>) => {
 
       <div className="min-h-full flex-1 mr-3 my-0.5 overflow-hidden pt-1">
         <div className="border-solid border-t-2 border-t-[#999999]" />
-        <div className="border-t-2 border-solid border-t-[#dddddd] border-b-2 border-b-[#999999]" />
-        <div className="border-t-2 border-solid border-t-[#dddddd] border-b-2 border-b-[#999999]" />
-        <div className="border-t-2 border-solid border-t-[#dddddd] border-b-2 border-b-[#999999]" />
-        <div className="border-t-2 border-solid border-t-[#dddddd] border-b-2 border-b-[#999999]" />
-        <div className="border-t-2 border-solid border-t-[#dddddd] border-b-2 border-b-[#999999]" />
+        <div className="border-t-2 border-solid border-t-tertiary border-b-2 border-b-[#999999]" />
+        <div className="border-t-2 border-solid border-t-tertiary border-b-2 border-b-[#999999]" />
+        <div className="border-t-2 border-solid border-t-tertiary border-b-2 border-b-[#999999]" />
+        <div className="border-t-2 border-solid border-t-tertiary border-b-2 border-b-[#999999]" />
+        <div className="border-t-2 border-solid border-t-tertiary border-b-2 border-b-[#999999]" />
       </div>
 
       <Image src={icons.appleLogo.src} alt={icons.appleLogo.alt} width={24} height={24} className="mr-2" />
@@ -31,11 +31,11 @@ const Header = (props: PropsWithChildren<Props>) => {
 
       <div className="min-h-full flex-1 ml-3 my-0.5 overflow-hidden pt-1">
         <div className="border-solid border-t-2 border-t-[#999999]" />
-        <div className="border-t-2 border-solid border-t-[#dddddd] border-b-2 border-b-[#999999]" />
-        <div className="border-t-2 border-solid border-t-[#dddddd] border-b-2 border-b-[#999999]" />
-        <div className="border-t-2 border-solid border-t-[#dddddd] border-b-2 border-b-[#999999]" />
-        <div className="border-t-2 border-solid border-t-[#dddddd] border-b-2 border-b-[#999999]" />
-        <div className="border-t-2 border-solid border-t-[#dddddd] border-b-2 border-b-[#999999]" />
+        <div className="border-t-2 border-solid border-t-tertiary border-b-2 border-b-[#999999]" />
+        <div className="border-t-2 border-solid border-t-tertiary border-b-2 border-b-[#999999]" />
+        <div className="border-t-2 border-solid border-t-tertiary border-b-2 border-b-[#999999]" />
+        <div className="border-t-2 border-solid border-t-tertiary border-b-2 border-b-[#999999]" />
+        <div className="border-t-2 border-solid border-t-tertiary border-b-2 border-b-[#999999]" />
       </div>
 
       <Image src={icons.headerRight.src} alt={icons.headerRight.alt} width={30} height={30} className="ml-2" />
