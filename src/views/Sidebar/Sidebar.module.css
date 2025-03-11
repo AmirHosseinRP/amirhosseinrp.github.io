@@ -1,0 +1,13 @@
+.sidebar-btn-image__open,
+.sidebar-btn-image__close {
+  transition: transform 0.5s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+.sidebar-btn-image__open {
+  transform: rotateY(180deg);
+}
+
+.sidebar-btn-image__close {
+  transform: rotateY(0deg);
+}

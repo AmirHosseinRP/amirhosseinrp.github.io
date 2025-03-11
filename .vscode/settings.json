@@ -23,5 +23,6 @@
     "source.sortMembers": "explicit"
   },
   "cSpell.words": ["autodocs", "clsx", "hamsaye", "neighbourhood", "nextjs"],
-  "svg.preview.background": "editor"
+  "svg.preview.background": "editor",
+  "postman.settings.dotenv-detection-notification-visibility": false
 }

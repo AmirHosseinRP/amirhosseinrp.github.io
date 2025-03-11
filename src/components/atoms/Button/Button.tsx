@@ -9,20 +9,31 @@ export interface Props extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButton
   size?: "small" | "medium" | "large";
   fullRounded?: boolean;
   href?: string;
+  download?: boolean;
+  isIconBtn?: boolean;
+  childrenClassName?: string;
 }
 
 const Button = (props: Props) => {
   const button = useMemo(() => {
     return (
       <button className={clsx("relative flex items-stretch text-lg", styles["btn"])}>
-        <span className={clsx("px-2", styles["border-button__span"])}>{props.children}</span>
+        <span
+          className={clsx(
+            "px-2 flex flex-row items-center justify-center gap-2 rp-prose-body2",
+            props.childrenClassName,
+            styles["border-button__span"]
+          )}
+        >
+          {props.children}
+        </span>
       </button>
     );
   }, [props]);
 
   if (props.href) {
     return (
-      <Link href={props.href} className="block w-full">
+      <Link href={props.href} download={props.download} className="block">
         {button}
       </Link>
     );
