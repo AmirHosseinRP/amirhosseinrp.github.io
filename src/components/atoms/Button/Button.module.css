@@ -4,6 +4,10 @@
   transition-duration: 0s !important;
 }
 
+.btn:hover {
+  background-color: #d1d1d1;
+}
+
 .btn:active {
   background-color: #666666;
   color: #ffffff;
@@ -116,6 +120,11 @@
 .border-button__span::after {
   border-right: 2px solid #26262666;
   border-bottom: 2px solid #26262666;
+}
+
+.btn:hover .border-button__span::before {
+  border-top: 3px solid #f3f3f3;
+  border-left: 3px solid #f3f3f3;
 }
 
 .btn:active .border-button__span::before {
