@@ -3,6 +3,7 @@
 import clsx from "clsx";
 import Image from "next/image";
 import { memo, useState } from "react";
+import Typography from "~/components/atoms/Typography/Typography";
 import icons from "~/shared/libs/icons";
 import styles from "./Sidebar.module.css";
 
@@ -13,18 +14,24 @@ const Sidebar = () => {
     <>
       <div
         className={clsx(
-          "h-full flex justify-center items-center aspect-square cursor-pointer z-[99] select-none",
+          "h-full flex justify-center items-stretch cursor-pointer z-[99] select-none max-h-[29px] relative",
           styles["sidebar-btn"]
         )}
         onClick={() => setIsOpen(!isOpen)}
       >
-        <Image
-          src={icons.navbar.src}
-          alt={icons.navbar.alt}
-          width={42}
-          height={42}
-          className={isOpen ? styles["sidebar-btn-image__open"] : styles["sidebar-btn-image__close"]}
-        />
+        <div className="flex flex-row justify-end items-center gap-2 btn-app px-2">
+          <Image
+            src={icons.navbar.src}
+            alt={icons.navbar.alt}
+            width={20}
+            height={20}
+            className={isOpen ? styles["sidebar-btn-image__open"] : styles["sidebar-btn-image__close"]}
+          />
+
+          <Typography variant="label3" tagName="p" className={styles["sidebar-text"]}>
+            Finder
+          </Typography>
+        </div>
       </div>
 
       {isOpen && (

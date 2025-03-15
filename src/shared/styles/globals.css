@@ -72,6 +72,7 @@
   top: 0;
   left: 0;
   box-sizing: border-box;
+  pointer-events: none;
 }
 
 .border-app::before {
@@ -82,4 +83,17 @@
 .border-app::after {
   border-right: 3px solid #26262666;
   border-bottom: 3px solid #26262666;
+}
+
+.btn-app {
+  transition-duration: 0s !important;
+}
+
+.btn-app:hover {
+  background-color: #aaaaaa;
+}
+
+.btn-app:active {
+  background-color: #666666;
+  color: #ffffff;
 }

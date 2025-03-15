@@ -11,3 +11,7 @@
 .sidebar-btn-image__close {
   transform: rotateY(0deg);
 }
+
+.sidebar-btn:active .sidebar-text {
+  color: #ffffff;
+}

@@ -25,7 +25,7 @@ const Header = (props: PropsWithChildren<Props>) => {
 
       <Image src={icons.appleLogo.src} alt={icons.appleLogo.alt} width={24} height={24} className="mr-2" />
 
-      <Typography variant="h4" className="h-full flex justify-center items-center">
+      <Typography variant="h4" className="h-full flex justify-center items-center" tagName="h3">
         {props.isLoading ? <div className="animate-pulse bg-gray-100 rounded-sm h-6 w-28" /> : props.title}
       </Typography>
 
