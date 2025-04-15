@@ -2,17 +2,17 @@
 
 import dynamic from "next/dynamic";
 import { memo } from "react";
-import BlueCross from "~/ui/(icons)/BlueCross";
-import Eyelash1 from "~/ui/(icons)/Eyelash1";
-import Eyelash2 from "~/ui/(icons)/Eyelash2";
-import Eyelash3 from "~/ui/(icons)/Eyelash3";
-import Eyelash4 from "~/ui/(icons)/Eyelash4";
-import Eyelash5 from "~/ui/(icons)/Eyelash5";
-import EyelidTop from "~/ui/(icons)/EyelidTop";
-import Iris from "~/ui/(icons)/Iris";
-import IrisBorder from "~/ui/(icons)/IrisBorder";
-import Pupil from "~/ui/(icons)/Pupil";
-import PupilBorder from "~/ui/(icons)/PupilBorder";
+import BlueCross from "~/views/(icons)/BlueCross";
+import Eyelash1 from "~/views/(icons)/Eyelash1";
+import Eyelash2 from "~/views/(icons)/Eyelash2";
+import Eyelash3 from "~/views/(icons)/Eyelash3";
+import Eyelash4 from "~/views/(icons)/Eyelash4";
+import Eyelash5 from "~/views/(icons)/Eyelash5";
+import EyelidTop from "~/views/(icons)/EyelidTop";
+import Iris from "~/views/(icons)/Iris";
+import IrisBorder from "~/views/(icons)/IrisBorder";
+import Pupil from "~/views/(icons)/Pupil";
+import PupilBorder from "~/views/(icons)/PupilBorder";
 import EyelidBottom from "../(icons)/EyelidBottom";
 
 const CursorMotion = dynamic(async () => await import("~/components/atoms/CursorMotion/CursorMotion"), { ssr: false });

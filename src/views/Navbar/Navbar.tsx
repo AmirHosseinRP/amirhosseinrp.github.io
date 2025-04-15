@@ -13,9 +13,9 @@ import NavbarMenu from "./components/Navbar.Menu";
 const Navbar = () => {
   return (
     <nav className={clsx("w-full min-h-9 flex flex-row justify-between items-stretch", styles["nav"])}>
-      <div className="flex justify-start items-stretch gap-5">
+      <div className="flex justify-start items-stretch">
         <Link href={routes.home()} className="max-h-[29px] relative top-[3px]">
-          <Typography variant="title1" tagName="h5" className="btn-app px-2 h-full pt-0.5">
+          <Typography variant="title1" tagName="h5" className="btn-app px-3 h-full pt-0.5">
             a.rezapanah
           </Typography>
         </Link>
