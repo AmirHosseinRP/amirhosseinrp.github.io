@@ -8,6 +8,7 @@ const icons = {
   navbar: { src: `${BASE_ICONS_URL}/navbar.svg`, alt: "nav" },
   pdf: { src: `${BASE_ICONS_URL}/pdf.svg`, alt: "pdf" },
   separator: { src: `${BASE_ICONS_URL}/separator.svg`, alt: "separator" },
+  startupFinderLogo: { src: `${BASE_ICONS_URL}/startup-finder-logo.svg`, alt: "startup finder" },
 };
 
 export default icons;
