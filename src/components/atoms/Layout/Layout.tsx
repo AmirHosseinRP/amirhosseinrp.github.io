@@ -9,17 +9,25 @@ const Layout = (props: PropsWithChildren) => {
 
   return (
     <>
-      {isLoading ? (
+      <div
+        className={clsx({
+          hidden: !isLoading,
+        })}
+      >
         <Startup onComplete={() => setIsLoading(false)} />
-      ) : (
-        <section
-          className={clsx(
-            "relative flex-1 container-app mx-auto flex flex-col overflow-auto border-[3px] border-solid border-[#262626] bg-secondary"
-          )}
-        >
-          {props.children}
-        </section>
-      )}
+      </div>
+
+      <section
+        className={clsx(
+          "relative flex-1 container-app mx-auto flex flex-col overflow-auto border-[3px] border-solid border-[#262626] bg-secondary transition-opacity",
+          {
+            "opacity-0 pointer-events-none absolute": isLoading,
+            "opacity-100": !isLoading,
+          }
+        )}
+      >
+        {props.children}
+      </section>
     </>
   );
 };
