@@ -5,6 +5,9 @@ const icons = {
   headerLeft: { src: `${BASE_ICONS_URL}/header-left.svg`, alt: "header" },
   headerRight: { src: `${BASE_ICONS_URL}/header-right.svg`, alt: "header" },
   appleLogo: { src: `${BASE_ICONS_URL}/apple-logo.svg`, alt: "apple" },
+  navbar: { src: `${BASE_ICONS_URL}/navbar.svg`, alt: "nav" },
+  pdf: { src: `${BASE_ICONS_URL}/pdf.svg`, alt: "pdf" },
+  separator: { src: `${BASE_ICONS_URL}/separator.svg`, alt: "separator" },
 };
 
 export default icons;

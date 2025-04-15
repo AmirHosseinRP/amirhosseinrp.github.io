@@ -5,6 +5,9 @@ const config: Config = {
   darkMode: ["class", "[data-mode='dark']"],
   theme: {
     extend: {
+      screens: {
+        xs: "448px",
+      },
       colors: {
         reverse: "var(--reverse)",
 

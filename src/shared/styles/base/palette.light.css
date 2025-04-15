@@ -2,9 +2,9 @@
   /**
    * :::: background colors ::::
    */
-  --bg-primary: #EEEEEE;
-  --bg-secondary: #CCCCCC;
-  --bg-tertiary: #f2f2f7;
+  --bg-primary: #eeeeee;
+  --bg-secondary: #cccccc;
+  --bg-tertiary: #dddddd;
   --bg-dialog: #f5f7fa;
   --bg-highlight: #a1a1a1;
 
@@ -14,16 +14,15 @@
   --prose-primary: #1e1e1e;
   --prose-secondary: #6d6d6d;
   --prose-hint: #888888;
-  --prose-disabled: #888888;
+  --prose-disabled: #9d9d9d;
   --prose-inverse: #f6f6f6;
   --prose-link: #0c8ce9;
   --prose-white: #ffffff;
-  --prose-brand: #1685c5;
+  --prose-brand: #8138bd;
   --prose-info: #ffffff;
   --prose-success: #ffffff;
   --prose-warning: #ffffff;
   --prose-critical: #ffffff;
-
 
   --reverse: #000000;
 

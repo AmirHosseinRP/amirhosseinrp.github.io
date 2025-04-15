@@ -19,6 +19,7 @@ const withMDXConfig = withMDX({
 const nextConfig = {
   trailingSlash: true,
   output: "export",
+  images: { unoptimized: true },
   experimental: {
     serviceWorker: true,
     webpackBuildWorker: true,
