@@ -17,13 +17,13 @@ body {
   @apply flex flex-col py-5;
   @apply bg-app bg-repeat;
   padding-top: calc(1.25rem + env(safe-area-inset-top));
-  padding-bottom: calc(1.25rem + env(safe-area-inset-bottom));
+  padding-bottom: calc(1.25rem + (env(safe-area-inset-bottom) / 2));
   background-color: #64639e;
 }
 
 @media (min-width: 640px) {
   .root-layout {
     padding-top: calc(2.5rem + env(safe-area-inset-top));
-    padding-bottom: calc(2.5rem + env(safe-area-inset-bottom));
+    padding-bottom: calc(2.5rem + (env(safe-area-inset-bottom) / 2));
   }
 }
