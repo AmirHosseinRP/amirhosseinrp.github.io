@@ -8,7 +8,7 @@
   "scope": "/",
   "dir": "ltr",
   "theme_color": "#64639E",
-  "background_color": "#252529",
+  "background_color": "#64639E",
   "display": "standalone",
   "orientation": "portrait",
   "prefer_related_applications": false,

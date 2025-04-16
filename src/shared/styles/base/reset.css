@@ -14,6 +14,16 @@ body {
 
 .root-layout {
   @apply h-dvh max-h-dvh overflow-hidden;
-  @apply flex flex-col py-5 sm:py-10;
+  @apply flex flex-col py-5;
   @apply bg-app bg-repeat;
+  padding-top: calc(1.25rem + env(safe-area-inset-top));
+  padding-bottom: calc(1.25rem + env(safe-area-inset-bottom));
+  background-color: #64639e;
+}
+
+@media (min-width: 640px) {
+  .root-layout {
+    padding-top: calc(2.5rem + env(safe-area-inset-top));
+    padding-bottom: calc(2.5rem + env(safe-area-inset-bottom));
+  }
 }
