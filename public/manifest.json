@@ -1,13 +1,13 @@
 {
-  "id": "Rezapanah",
-  "name": "Rezapanah",
-  "short_name": "Rezapanah",
+  "id": "a.rezapanah",
+  "name": "a.rezapanah",
+  "short_name": "a.rezapanah",
   "lang": "en",
   "description": "Amirhossein Rezapanah Portfolio",
   "start_url": "/",
   "scope": "/",
   "dir": "ltr",
-  "theme_color": "#252529",
+  "theme_color": "#64639E",
   "background_color": "#252529",
   "display": "standalone",
   "orientation": "portrait",
@@ -19,19 +19,13 @@
     "scope_url_host": "amirhosseinrp.github.io",
     "scope_url_path": "/"
   },
-  "shortcuts": [
-    {
-      "name": "Home",
-      "url": "/",
-      "icons": [{ "src": "/icons/web-app-manifest-192x192.png", "sizes": "192x192" }]
-    }
-  ],
   "handle_links": "preferred",
   "url_handlers": [
     {
       "origin": "https://amirhosseinrp.github.io"
     }
   ],
+  "related_applications": [],
   "icons": [
     {
       "src": "/icons/web-app-manifest-192x192.png",
@@ -46,6 +40,7 @@
       "purpose": "any"
     }
   ],
+  "display_override": ["standalone", "window-controls-overlay"],
   "screenshots": [
     {
       "src": "/icons/screenshot-cover-3840x2160.png",
@@ -60,6 +55,14 @@
       "type": "image/png",
       "form_factor": "narrow",
       "label": "random dino image mobile"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Site",
+      "url": "/",
+      "description": "a.rezapanah",
+      "icons": [{ "src": "/icons/web-app-manifest-192x192.png", "sizes": "192x192" }]
     }
   ]
 }
