@@ -2,10 +2,11 @@
 
 import clsx from "clsx";
 import { useState, type PropsWithChildren } from "react";
+import env from "~/shared/config/env";
 import Startup from "~/views/Startup/Startup";
 
 const Layout = (props: PropsWithChildren) => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(env.mode !== "development" ? true : false);
 
   return (
     <>

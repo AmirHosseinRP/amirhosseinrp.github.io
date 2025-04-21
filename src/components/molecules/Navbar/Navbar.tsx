@@ -5,7 +5,7 @@ import { memo } from "react";
 import Typography from "~/components/atoms/Typography/Typography";
 import icons from "~/shared/libs/icons";
 import { routes } from "~/shared/libs/routes";
-import Sidebar from "~/views/Sidebar/Sidebar";
+import Sidebar from "~/components/molecules/Sidebar/Sidebar";
 import styles from "./Navbar.module.css";
 import NavbarClock from "./components/Navbar.Clock";
 import NavbarMenu from "./components/Navbar.Menu";
