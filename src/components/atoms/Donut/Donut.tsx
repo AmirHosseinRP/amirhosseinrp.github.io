@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { memo, useEffect, useRef, useState } from "react";
 
 interface Props {
   width?: number;
@@ -39,7 +39,7 @@ const Donut = (props: Props) => {
       }
     };
 
-    handleResize(); // Initial call
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, [width]);
@@ -98,8 +98,8 @@ const Donut = (props: Props) => {
 
       setOutput(lines);
 
-      anglesRef.current.A += 0.04;
-      anglesRef.current.B += 0.02;
+      anglesRef.current.A += 0.02;
+      anglesRef.current.B += 0.01;
 
       frameRef.current = requestAnimationFrame(renderFrame);
     };
@@ -112,9 +112,9 @@ const Donut = (props: Props) => {
   }, [width, height, innerRadius, r1Points, r2Points, fov, scale, shades]);
 
   return (
-    <div ref={containerRef} className="w-full h-full flex justify-center items-center col-span-1 aspect-[4/3]">
+    <div ref={containerRef} className="w-full h-full flex justify-center items-center col-span-1">
       <pre
-        className="donut-container m-0 flex flex-col justify-center items-center text-[#CCCCCC] w-full h-full bg-black text-center"
+        className="donut-container m-0 flex flex-col justify-center items-center text-[#CCCCCC] w-full h-full bg-black py-10 text-center"
         style={{
           fontFamily: "monospace",
           lineHeight: "1",
@@ -129,4 +129,4 @@ const Donut = (props: Props) => {
   );
 };
 
-export default Donut;
+export default memo(Donut);
