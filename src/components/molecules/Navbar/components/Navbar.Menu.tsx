@@ -3,7 +3,7 @@ import NavbarMenuItem from "./Navbar.MenuItem";
 
 const NavbarMenu = () => {
   return (
-    <ul className="hidden md:flex justify-start items-stretch gap-1 h-full">
+    <ul className="hidden sm:flex justify-start items-stretch gap-1 h-full">
       <NavbarMenuItem>File</NavbarMenuItem>
       <NavbarMenuItem>Edit</NavbarMenuItem>
       <NavbarMenuItem>Go</NavbarMenuItem>

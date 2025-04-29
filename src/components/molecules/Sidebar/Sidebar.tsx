@@ -14,12 +14,12 @@ const Sidebar = () => {
     <>
       <div
         className={clsx(
-          "h-full flex justify-center items-stretch cursor-pointer z-[99] select-none max-h-[29px] relative",
+          "h-full flex justify-center items-stretch cursor-pointer z-[99] select-none max-h-8 relative bottom-[1px]",
           styles["sidebar-btn"]
         )}
         // onClick={() => setIsOpen(!isOpen)}
       >
-        <div className="flex flex-row justify-end items-center gap-2 btn-app px-2">
+        <div className="flex flex-row justify-end items-center gap-2 btn-app px-2 pr-5">
           <Image
             src={icons.navbar.src}
             alt={icons.navbar.alt}

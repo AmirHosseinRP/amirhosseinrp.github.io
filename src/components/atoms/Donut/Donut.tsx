@@ -98,8 +98,8 @@ const Donut = (props: Props) => {
 
       setOutput(lines);
 
-      anglesRef.current.A += 0.02;
-      anglesRef.current.B += 0.01;
+      anglesRef.current.A += 0.03;
+      anglesRef.current.B += 0.02;
 
       frameRef.current = requestAnimationFrame(renderFrame);
     };
@@ -112,7 +112,7 @@ const Donut = (props: Props) => {
   }, [width, height, innerRadius, r1Points, r2Points, fov, scale, shades]);
 
   return (
-    <div ref={containerRef} className="w-full h-full flex justify-center items-center col-span-1">
+    <div ref={containerRef} className="w-full h-full flex justify-center items-center col-span-1 border-app p-1">
       <pre
         className="donut-container m-0 flex flex-col justify-center items-center text-[#CCCCCC] w-full h-full bg-black py-10 text-center"
         style={{
