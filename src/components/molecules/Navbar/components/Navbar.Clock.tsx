@@ -23,7 +23,7 @@ const NavbarClock = () => {
   }, []);
 
   return (
-    <Typography variant="label3" className="relative pr-2" tagName="p">
+    <Typography variant="label3" className="relative pr-2 bottom-0.5" tagName="p">
       {time}
     </Typography>
   );
