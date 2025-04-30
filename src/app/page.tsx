@@ -14,13 +14,13 @@ export default function Home() {
         <Hero />
 
         <section className="flex flex-col h-screen mb-10">
-          <div className="w-full max-w-[90%] md:max-w-[75%] -mb-16 z-10">
+          <div className="w-full max-w-[90%] md:max-w-[80%] xl:max-w-[60%] -mb-16 z-10">
             <Header title="Skills" />
 
             <Skills />
           </div>
 
-          <div className="w-full max-w-[75%] self-end">
+          <div className="w-full max-w-[90%] md:max-w-[80%] xl:max-w-[60%] self-end">
             <Header title="Donut" />
 
             <Donut />

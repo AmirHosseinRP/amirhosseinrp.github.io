@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { memo } from "react";
 import Button from "~/components/atoms/Button/Button";
 import Typography from "~/components/atoms/Typography/Typography";
@@ -20,9 +19,8 @@ const Hero = () => {
           Download my resume:
         </Typography>
 
-        <Button href={env.links.resume ?? ""} download childrenClassName="py-1">
+        <Button href={env.links.resume ?? ""} endIconSrc={icons.pdf.src} download>
           download
-          <Image src={icons.pdf.src} alt={icons.pdf.alt} width={24} height={24} />
         </Button>
       </div>
     </section>
