@@ -12,7 +12,6 @@ export interface Props extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButton
   href?: string;
   target?: HTMLAttributeAnchorTarget;
   download?: boolean;
-  linkClassName?: string;
   isIconBtn?: boolean;
   childrenClassName?: string;
   iconClassName?: string;
@@ -23,7 +22,8 @@ const Button = (props: Props) => {
   const button = useMemo(() => {
     return (
       <button
-        className={clsx("relative flex items-stretch text-lg", props.href && "w-full", styles["btn"], props.className)}
+        onClick={props.onClick}
+        className={clsx("relative flex items-stretch text-lg", styles["btn"], props.className)}
       >
         <span
           className={clsx(
@@ -49,9 +49,22 @@ const Button = (props: Props) => {
         href={props.href}
         target={props.target}
         download={props.download}
-        className={clsx("block", props.linkClassName)}
+        className={clsx("relative flex items-stretch text-lg", styles["btn"], props.className)}
       >
-        {button}
+        <span
+          className={clsx(
+            "w-full px-2 flex flex-row items-center justify-center gap-2 rp-prose-body2",
+            props.childrenClassName,
+            props.endIconSrc && "py-1",
+            styles["border-button__span"]
+          )}
+        >
+          {props.children}
+
+          {props.endIconSrc && (
+            <Image src={props.endIconSrc} alt="icon" width={24} height={24} className={props.iconClassName} />
+          )}
+        </span>
       </Link>
     );
   }
