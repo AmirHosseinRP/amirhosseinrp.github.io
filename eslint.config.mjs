@@ -27,7 +27,8 @@ const config = [
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
     "prettier",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "@react-three/eslint-plugin"
   ),
   {
     plugins: {
