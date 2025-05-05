@@ -19,6 +19,7 @@ const logos = {
   chartjs: { src: `${BASE_ICONS_URL}/chartjs.svg`, alt: "chartjs" },
   axios: { src: `${BASE_ICONS_URL}/axios.svg`, alt: "axios" },
   eslint: { src: `${BASE_ICONS_URL}/eslint.svg`, alt: "eslint" },
+  dotin: { src: `${BASE_ICONS_URL}/dotin.svg`, alt: "dotin" },
 };
 
 export default logos;
