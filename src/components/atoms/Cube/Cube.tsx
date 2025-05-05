@@ -9,6 +9,7 @@ import { TextureLoader, type Mesh } from "three";
 
 interface Props {
   scrollProgress: MotionValue<number>;
+  iconSrc: string;
 }
 
 const Cube = (props: Props) => {
@@ -18,7 +19,7 @@ const Cube = (props: Props) => {
         <OrbitControls enableZoom={false} enablePan={false} />
         <ambientLight intensity={2} />
         <directionalLight position={[2, 1, 1]} />
-        <CubeMesh scrollProgress={props.scrollProgress} />
+        <CubeMesh scrollProgress={props.scrollProgress} iconSrc={props.iconSrc} />
       </Canvas>
     </div>
   );
@@ -68,7 +69,7 @@ const CubeMesh = (props: Props) => {
     return () => window.removeEventListener("mousemove", manageMouseMove);
   }, []);
 
-  const texture = useLoader(TextureLoader, "assets/logos/dotin.svg");
+  const texture = useLoader(TextureLoader, props.iconSrc);
 
   return (
     <motion.mesh
