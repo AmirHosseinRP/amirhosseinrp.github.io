@@ -1,6 +1,5 @@
 "use client";
 
-import { OrbitControls } from "@react-three/drei";
 import { Canvas, useLoader } from "@react-three/fiber";
 import { motion } from "framer-motion-3d";
 import { useMotionValue, useSpring, useTransform, type MotionValue } from "motion/react";
@@ -10,16 +9,16 @@ import { TextureLoader, type Mesh } from "three";
 interface Props {
   scrollProgress: MotionValue<number>;
   iconSrc: string;
+  rotationScale: number;
 }
 
 const Cube = (props: Props) => {
   return (
     <div className="border-app w-full h-full p-1">
       <Canvas className="bg-black">
-        <OrbitControls enableZoom={false} enablePan={false} />
         <ambientLight intensity={2} />
         <directionalLight position={[2, 1, 1]} />
-        <CubeMesh scrollProgress={props.scrollProgress} iconSrc={props.iconSrc} />
+        <CubeMesh {...props} />
       </Canvas>
     </div>
   );
@@ -52,12 +51,12 @@ const CubeMesh = (props: Props) => {
 
   const combinedRotationX = useTransform(
     [scrollRotation, mouse.y],
-    ([scroll, mouseY]) => (scroll as number) + (mouseY as number)
+    ([scroll, mouseY]) => (scroll as number) + (mouseY as number) + props.rotationScale
   );
 
   const combinedRotationY = useTransform(
     [scrollRotation, mouse.x],
-    ([scroll, mouseX]) => (scroll as number) + (mouseX as number)
+    ([scroll, mouseX]) => (scroll as number) + (mouseX as number) + props.rotationScale
   );
 
   const smoothRotationX = useSpring(combinedRotationX, springOptions);
