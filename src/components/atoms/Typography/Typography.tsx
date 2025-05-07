@@ -72,6 +72,7 @@ const Typography = (props: PropsWithChildren<Props>) => {
   }, [noWrap]);
 
   return (
+    // @ts-expect-error
     <Tag className={clsx(textVariant, textColor, textNoWrap, className)} {...(props.ltr && { dir: "ltr" })}>
       {children}
     </Tag>

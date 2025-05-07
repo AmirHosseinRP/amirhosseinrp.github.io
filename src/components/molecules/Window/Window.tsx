@@ -9,7 +9,7 @@ interface Props {
 
 const Window = (props: PropsWithChildren<Props>) => {
   return (
-    <div className={clsx("w-full max-w-[90%] md:max-w-[80%] xl:max-w-[60%] bg-tertiary", props.className)}>
+    <div className={clsx("w-full bg-tertiary", props.className)}>
       <Header title={props.title} />
 
       {props.children}

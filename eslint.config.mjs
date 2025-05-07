@@ -1,5 +1,6 @@
 import { FlatCompat } from "@eslint/eslintrc";
 import js from "@eslint/js";
+import ReactThree from "@react-three/eslint-plugin";
 import typescriptEslint from "@typescript-eslint/eslint-plugin";
 import tsParser from "@typescript-eslint/parser";
 import prettier from "eslint-plugin-prettier";
@@ -27,13 +28,15 @@ const config = [
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
     "prettier",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "plugin:@react-three/recommended"
   ),
   {
     plugins: {
       react,
       prettier,
       "@typescript-eslint": typescriptEslint,
+      "@react-three": ReactThree,
     },
 
     languageOptions: {
@@ -54,6 +57,7 @@ const config = [
       "react/react-in-jsx-scope": "off",
       "react-hooks/exhaustive-deps": "off",
       "@typescript-eslint/ban-ts-comment": "off",
+      "react/no-unknown-property": ["error", { ignore: ["args", "map", "intensity", "position"] }],
     },
   },
   {
