@@ -1,6 +1,6 @@
 import clsx from "clsx";
 
-import { memo, PropsWithChildren, Ref, useRef } from "react";
+import { memo, PropsWithChildren, Ref } from "react";
 
 interface Props {
   className?: string;
@@ -8,8 +8,6 @@ interface Props {
 }
 
 const Container = (props: PropsWithChildren<Props>) => {
-  
-
   return (
     <div
       ref={props.ref}
@@ -18,7 +16,6 @@ const Container = (props: PropsWithChildren<Props>) => {
         props.className
       )}
     >
-      
       {props.children}
     </div>
   );
