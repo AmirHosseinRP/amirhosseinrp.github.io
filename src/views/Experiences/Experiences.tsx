@@ -19,7 +19,7 @@ const Experiences = (props: Props) => {
     <>
       <section className="hidden xl:flex flex-col gap-9">
         <div className="relative mb-6">
-          <Window title="Experience" className="relative z-10 md:max-w-[62%] !h-fit max-w-[90%]">
+          <Window title="Experience" className="relative z-10 md:max-w-[62%] max-w-[90%]">
             <ExperiencesDotin />
           </Window>
 
@@ -33,13 +33,13 @@ const Experiences = (props: Props) => {
             <Cube scrollProgress={props.scrollYProgress} iconSrc={logos.ferdowsi.src} rotationScale={4} />
           </Window>
 
-          <Window title="Experience" className="z-10 max-w-[54%] !h-fit absolute right-0 bottom-0">
+          <Window title="Experience" className="z-10 max-w-[54%] absolute right-0 bottom-0">
             <ExperiencesFerdowsi />
           </Window>
         </div>
 
         <div className="relative">
-          <Window title="Experience" className="relative z-10 max-w-[46%] !h-fit top-36">
+          <Window title="Experience" className="relative z-10 max-w-[46%] top-36">
             <ExperiencesFanap />
           </Window>
 
