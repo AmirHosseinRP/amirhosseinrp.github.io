@@ -11,6 +11,24 @@ export const metadata: Metadata = {
   title: "Amirhossein Rezapanah",
   description: "My portfolio web application",
   manifest: "/manifest.json",
+  keywords: [
+    "Amirhossein Rezapanah",
+    "amirhosseinrp",
+    "AmirHosseinRP",
+    "Frontend",
+    "Front-end",
+    "Frontend Developer",
+    "Front-end Developer",
+    "Portfolio",
+    "React",
+    "Next.js",
+    "Web Developer",
+    "Software Engineer",
+  ],
+  authors: [{ name: "Amirhossein Rezapanah", url: "https://amirhosseinrp.github.io" }],
+  alternates: {
+    canonical: "https://amirhosseinrp.github.io",
+  },
   verification: {
     google: "DFCD75C22v8WzCBHq5Vq4duelVKipW6mD0jIlpYaBXg",
   },
@@ -21,7 +39,16 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Amirhossein Rezapanah",
     description: "My portfolio web application",
-    images: ["https://amirhosseinrp.github.io/"], // TODO: set image
+    type: "website",
+    url: "https://amirhosseinrp.github.io",
+    images: ["https://amirhosseinrp.github.io/assets/images/og-image.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Amirhossein Rezapanah",
+    description: "My portfolio web application",
+    images: ["https://amirhosseinrp.github.io/images/og-image.jpg"],
+    // creator: "@",
   },
 };
 
@@ -29,9 +56,11 @@ export const viewport: Viewport = {
   themeColor: "#64639E",
   colorScheme: "light dark",
   width: "device-width",
-  viewportFit: "cover",
   initialScale: 1,
-  maximumScale: 1,
+  minimumScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+  viewportFit: "cover",
   interactiveWidget: "resizes-content",
 };
 
