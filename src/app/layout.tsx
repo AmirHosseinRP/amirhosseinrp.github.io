@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   title: "Amirhossein Rezapanah",
   description: "My portfolio web application",
   manifest: "/manifest.json",
+  verification: {
+    google: "DFCD75C22v8WzCBHq5Vq4duelVKipW6mD0jIlpYaBXg",
+  },
   appleWebApp: {
     capable: true,
     title: "a.rezapanah",
