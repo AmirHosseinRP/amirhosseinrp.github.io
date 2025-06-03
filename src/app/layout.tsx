@@ -41,13 +41,13 @@ export const metadata: Metadata = {
     description: "Portfolio of Amirhossein Rezapanah | Frontend software engineer",
     type: "website",
     url: "https://amirhosseinrp.github.io",
-    images: ["https://amirhosseinrp.github.io/assets/images/og-image.png"],
+    images: ["/assets/images/og-image.png"],
   },
   twitter: {
     card: "summary_large_image",
     title: "Amirhossein Rezapanah",
     description: "Portfolio of Amirhossein Rezapanah | Frontend software engineer",
-    images: ["https://amirhosseinrp.github.io/assets/images/og-image.png"],
+    images: ["/assets/images/og-image.png"],
     // creator: "@",
   },
 };
