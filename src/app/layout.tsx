@@ -9,7 +9,7 @@ import "~/shared/styles/globals.css";
 
 export const metadata: Metadata = {
   title: "Amirhossein Rezapanah",
-  description: "My portfolio web application",
+  description: "Portfolio of Amirhossein Rezapanah | Frontend software engineer",
   manifest: "/manifest.json",
   keywords: [
     "Amirhossein Rezapanah",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Amirhossein Rezapanah",
-    description: "My portfolio web application",
+    description: "Portfolio of Amirhossein Rezapanah | Frontend software engineer",
     type: "website",
     url: "https://amirhosseinrp.github.io",
     images: ["https://amirhosseinrp.github.io/assets/images/og-image.png"],
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Amirhossein Rezapanah",
-    description: "My portfolio web application",
+    description: "Portfolio of Amirhossein Rezapanah | Frontend software engineer",
     images: ["https://amirhosseinrp.github.io/images/og-image.jpg"],
     // creator: "@",
   },
@@ -70,6 +70,7 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
     <html lang="en">
       <head>
         <meta name="android.support.customtabs.trusted.DEFAULT_URL" content="https://amirhosseinrp.github.io" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#333333"></link>
         <link rel="web-app-origin-association" href="/.well-known/web-app-origin-association"></link>
       </head>
