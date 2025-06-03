@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Amirhossein Rezapanah",
     description: "Portfolio of Amirhossein Rezapanah | Frontend software engineer",
-    images: ["https://amirhosseinrp.github.io/images/og-image.jpg"],
+    images: ["https://amirhosseinrp.github.io/assets/images/og-image.png"],
     // creator: "@",
   },
 };
