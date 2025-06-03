@@ -41,13 +41,13 @@ export const metadata: Metadata = {
     description: "Portfolio of Amirhossein Rezapanah | Frontend software engineer",
     type: "website",
     url: "https://amirhosseinrp.github.io",
-    images: ["/assets/images/og-image.png"],
+    // images: ["/assets/images/og-image.png"],
   },
   twitter: {
     card: "summary_large_image",
     title: "Amirhossein Rezapanah",
     description: "Portfolio of Amirhossein Rezapanah | Frontend software engineer",
-    images: ["/assets/images/og-image.png"],
+    // images: ["/assets/images/og-image.png"],
     // creator: "@",
   },
 };
@@ -74,6 +74,8 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
         <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?" />
         <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#333333"></link>
         <link rel="web-app-origin-association" href="/.well-known/web-app-origin-association"></link>
+        <meta property="og:image" content="/assets/images/og-image.png" />
+        <meta name="twitter:image" content="/assets/images/og-image.png"></meta>
       </head>
 
       <body className="root-layout" suppressHydrationWarning>
