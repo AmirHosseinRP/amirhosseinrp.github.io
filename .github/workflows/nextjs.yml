@@ -31,6 +31,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Detect package manager
         id: detect-package-manager
         run: |
@@ -48,13 +49,16 @@ jobs:
             echo "Unable to determine package manager"
             exit 1
           fi
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: "20"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
+
       - name: Restore cache
         uses: actions/cache@v4
         with:
@@ -65,10 +69,17 @@ jobs:
           # If source files changed but packages didn't, rebuild from a prior cache.
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
+
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }} --legacy-peer-deps
+
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
+        env: # ✅ Inject public env var here
+          NEXT_PUBLIC_APP_VERSION: ${{ vars.NEXT_PUBLIC_APP_VERSION }}
+          NEXT_PUBLIC_RESUME_LINK: ${{ vars.NEXT_PUBLIC_RESUME_LINK }}
+          RP_CLOUDCONVERT_API_KEY: ${{ secrets.RP_CLOUDCONVERT_API_KEY }}
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
