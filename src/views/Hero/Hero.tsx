@@ -3,6 +3,7 @@ import Button from "~/components/atoms/Button/Button";
 import Typography from "~/components/atoms/Typography/Typography";
 import env from "~/shared/config/env";
 import icons from "~/shared/libs/icons";
+import Test from "../Test/Test";
 
 const Hero = () => {
   return (
@@ -23,6 +24,8 @@ const Hero = () => {
           download
         </Button>
       </div>
+
+      <Test />
     </section>
   );
 };
