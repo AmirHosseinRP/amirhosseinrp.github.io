@@ -3,7 +3,6 @@ import Button from "~/components/atoms/Button/Button";
 import Typography from "~/components/atoms/Typography/Typography";
 import env from "~/shared/config/env";
 import icons from "~/shared/libs/icons";
-import Test from "../Test/Test";
 
 const Hero = () => {
   return (
@@ -20,12 +19,14 @@ const Hero = () => {
           Download my resume:
         </Typography>
 
-        <Button href={env.links.resume ?? ""} endIconSrc={icons.pdf.src} download>
-          download
+        <Button href={env.links.resumePdf} endIconSrc={icons.pdf.src} download>
+          PDF
+        </Button>
+
+        <Button href={env.links.resumeDocx} endIconSrc={icons.word.src} download>
+          Docx
         </Button>
       </div>
-
-      <Test />
     </section>
   );
 };
