@@ -7,6 +7,7 @@ const icons = {
   appleLogo: { src: `${BASE_ICONS_URL}/apple-logo.svg`, alt: "apple" },
   navbar: { src: `${BASE_ICONS_URL}/navbar.svg`, alt: "nav" },
   pdf: { src: `${BASE_ICONS_URL}/pdf.svg`, alt: "pdf" },
+  word: { src: `${BASE_ICONS_URL}/word.svg`, alt: "word" },
   separator: { src: `${BASE_ICONS_URL}/separator.svg`, alt: "separator" },
   startupFinderLogo: { src: `${BASE_ICONS_URL}/startup-finder-logo.svg`, alt: "startup finder" },
 };

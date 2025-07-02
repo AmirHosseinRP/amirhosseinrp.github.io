@@ -4,7 +4,8 @@ const env = {
     version: process.env.NEXT_PUBLIC_APP_VERSION,
   },
   links: {
-    resume: process.env.NEXT_PUBLIC_RESUME_LINK,
+    resumePdf: process.env.NEXT_PUBLIC_RESUME_PDF_LINK,
+    resumeDocx: process.env.NEXT_PUBLIC_RESUME_DOCX_LINK,
   },
 };
 
