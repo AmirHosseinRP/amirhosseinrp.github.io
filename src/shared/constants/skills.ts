@@ -17,6 +17,21 @@ export const skills = [
     logo: logos.typescript.src,
   },
   {
+    title: "HTML",
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+    logo: logos.html.src,
+  },
+  {
+    title: "CSS",
+    link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+    logo: logos.css.src,
+  },
+  {
+    title: "JavaScript (ES6)",
+    link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+    logo: logos.javascript.src,
+  },
+  {
     title: "Tailwind CSS",
     link: "https://tailwindcss.com/",
     logo: logos.tailwind.src,
@@ -32,6 +47,16 @@ export const skills = [
     logo: logos.zustand.src,
   },
   {
+    title: "Svelte",
+    link: "https://svelte.dev/",
+    logo: logos.svelte.src,
+  },
+  {
+    title: "SvelteKit",
+    link: "https://svelte.dev/docs/kit/introduction",
+    logo: logos.sveltekit.src,
+  },
+  {
     title: "PWA",
     link: "https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps",
     logo: logos.pwa.src,
@@ -45,21 +70,6 @@ export const skills = [
     title: "Git",
     link: "https://git-scm.com/",
     logo: logos.git.src,
-  },
-  {
-    title: "HTML",
-    link: "https://developer.mozilla.org/en-US/docs/Web/HTML",
-    logo: logos.html.src,
-  },
-  {
-    title: "CSS",
-    link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
-    logo: logos.css.src,
-  },
-  {
-    title: "JavaScript (ES6)",
-    link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-    logo: logos.javascript.src,
   },
   {
     title: "Storybook",
