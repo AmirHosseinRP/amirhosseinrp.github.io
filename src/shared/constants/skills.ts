@@ -57,6 +57,11 @@ export const skills = [
     logo: logos.sveltekit.src,
   },
   {
+    title: "Git",
+    link: "https://git-scm.com/",
+    logo: logos.git.src,
+  },
+  {
     title: "PWA",
     link: "https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps",
     logo: logos.pwa.src,
@@ -67,14 +72,9 @@ export const skills = [
     logo: logos.twa.src,
   },
   {
-    title: "Git",
-    link: "https://git-scm.com/",
-    logo: logos.git.src,
-  },
-  {
-    title: "Storybook",
-    link: "https://storybook.js.org/",
-    logo: logos.storybook.src,
+    title: "Axios",
+    link: "https://axios-http.com/",
+    logo: logos.axios.src,
   },
   {
     title: "SWR",
@@ -87,14 +87,24 @@ export const skills = [
     logo: logos.yup.src,
   },
   {
+    title: "Framer Motion",
+    link: "https://motion.dev/",
+    logo: logos.framerMotion.src,
+  },
+  {
+    title: "Three.js",
+    link: "https://threejs.org/",
+    logo: logos.threejs.src,
+  },
+  {
+    title: "Storybook",
+    link: "https://storybook.js.org/",
+    logo: logos.storybook.src,
+  },
+  {
     title: "Chart.js",
     link: "https://www.chartjs.org/",
     logo: logos.chartjs.src,
-  },
-  {
-    title: "Axios",
-    link: "https://axios-http.com/",
-    logo: logos.axios.src,
   },
   {
     title: "ESLint",
