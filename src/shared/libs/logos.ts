@@ -3,6 +3,8 @@ const BASE_ICONS_URL = "/assets/logos";
 const logos = {
   react: { src: `${BASE_ICONS_URL}/react.svg`, alt: "react" },
   nextjs: { src: `${BASE_ICONS_URL}/nextjs.svg`, alt: "nextjs" },
+  svelte: { src: `${BASE_ICONS_URL}/svelte.svg`, alt: "svelte" },
+  sveltekit: { src: `${BASE_ICONS_URL}/sveltekit.svg`, alt: "sveltekit" },
   typescript: { src: `${BASE_ICONS_URL}/typescript.svg`, alt: "typescript" },
   tailwind: { src: `${BASE_ICONS_URL}/tailwind.svg`, alt: "tailwind" },
   rhf: { src: `${BASE_ICONS_URL}/rhf.svg`, alt: "rhf" },
