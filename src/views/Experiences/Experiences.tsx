@@ -17,7 +17,7 @@ interface Props {
 const Experiences = (props: Props) => {
   return (
     <>
-      <section className="hidden xl:flex flex-col gap-9">
+      <section className="hidden xl:flex flex-col gap-9 mb-52">
         <div className="relative mb-6">
           <Window title="Experience" className="relative z-10 md:max-w-[62%] max-w-[90%]">
             <ExperiencesDotin />
@@ -49,7 +49,7 @@ const Experiences = (props: Props) => {
         </div>
       </section>
 
-      <section className="flex xl:hidden flex-col gap-7">
+      <section className="flex xl:hidden flex-col gap-7 mb-16">
         <Window title="Experience" className="z-10 !h-fit max-w-[95%]">
           <ExperiencesDotin />
         </Window>

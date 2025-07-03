@@ -87,6 +87,8 @@
 
 .btn-app {
   transition-duration: 0s !important;
+  user-select: none;
+  cursor: pointer;
 }
 
 .btn-app:hover {

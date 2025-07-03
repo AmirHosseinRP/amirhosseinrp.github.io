@@ -6,6 +6,7 @@ import Container from "~/components/atoms/Container/Container";
 import Navbar from "~/components/molecules/Navbar/Navbar";
 import Experiences from "~/views/Experiences/Experiences";
 import Hero from "~/views/Hero/Hero";
+import Projects from "~/views/Projects/Projects";
 import Skills from "~/views/Skills/Skills";
 
 export default function Home() {
@@ -22,6 +23,8 @@ export default function Home() {
         <Skills />
 
         <Experiences ref={containerRef} scrollYProgress={scrollYProgress} />
+
+        <Projects />
       </Container>
     </>
   );
