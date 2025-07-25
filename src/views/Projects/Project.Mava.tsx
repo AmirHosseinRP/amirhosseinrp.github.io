@@ -5,22 +5,22 @@ import Typography from "~/components/atoms/Typography/Typography";
 import BrowserWindow from "~/components/molecules/BrowserWindow/BrowserWindow";
 import images from "~/shared/libs/images";
 
-const ProjectsPodCharge = () => {
+const ProjectsMava = () => {
   return (
     <>
-      <BrowserWindow title="Project" subtitle="PodCharge">
+      <BrowserWindow title="Project" subtitle="Ma'va">
         <section className="flex flex-col gap-5 p-5 border-app">
           <Image
-            src={images.podcharge.desktop.src}
-            alt={images.podcharge.desktop.alt}
+            src={images.mava.desktop.src}
+            alt={images.mava.desktop.alt}
             width={1000}
             height={1000}
             className="w-full h-auto border-app hidden sm:block"
           />
 
           <Image
-            src={images.podcharge.mobile.src}
-            alt={images.podcharge.mobile.alt}
+            src={images.mava.mobile.src}
+            alt={images.mava.mobile.alt}
             width={1000}
             height={1000}
             className="w-full h-auto border-app block sm:hidden"
@@ -29,55 +29,51 @@ const ProjectsPodCharge = () => {
           <div className="grid grid-cols-7 gap-5">
             <article className="border-app col-span-7 lg:col-span-5 py-6 px-7 w-full h-full bg-[#f1f1f1]">
               <Typography variant="title1" tagName="h4" className="inline">
-                PodCharge (PWA)
+                Ma&apos;va
               </Typography>
 
               <Typography variant="title2" tagName="p" className="inline">
-                | Condo Management Platform |{" "}
+                | Housing Deposit Platform{" "}
               </Typography>
 
               <Link
-                href="https://web.podcharge.ir/"
+                href="https://housing.pod.ir/"
                 target="_blank"
                 className="rp-prose-body2 text-prose-brand underline inline"
               >
-                web.podcharge.ir
+                housing.pod.ir
               </Link>
 
               <Typography variant="body2" tagName="p">
-                Mar 2023 - Present | Associated with dotin
+                Sep 2023 - Apr 2025 | Associated with dotin
               </Typography>
 
               <Typography variant="body3" className="list-disc ml-7" tagName="ul">
+                <li>Designed and launched the Housing Deposit Loan service to help tenants obtain rental deposits.</li>
                 <li>
-                  PodCharge is a smart building management system designed to optimize financial and non-financial
-                  operations.
+                  Streamlined the loan process through a fully online platform, eliminating the need for in-person
+                  visits and guarantors.
                 </li>
                 <li>
-                  Facilitated all the financial transactions by residents and building managers, such as charge
-                  management, payment of expenses, fund transfers, utility bill payments, and payment reporting, through
-                  a single combined platform.
-                </li>
-                <li>
-                  Combined functionality for non-financial operations, such as resident communication tools, rule and
-                  event management, and unit and common area management.
+                  Enabled fast disbursement of funds and loan deployment to landlords, improving customer satisfaction
+                  with rapid response times.
                 </li>
                 <li>
                   Sandbox:{" "}
-                  <Link href="https://hamsayeh.sandpod.ir/" target="_blank" className="text-prose-brand underline">
-                    hamsaye.sandpod.ir
+                  <Link href="https://housing.sandpod.ir/" target="_blank" className="text-prose-brand underline">
+                    housing.sandpod.ir
                   </Link>{" "}
                   | Demo video:{" "}
-                  <Link href="https://youtu.be/jrbDXbjPiYw" target="_blank" className="text-prose-brand underline">
-                    youtu.be/jrbDXbjPiYw
+                  <Link href="https://youtu.be/NVpXwc08igk" target="_blank" className="text-prose-brand underline">
+                    youtu.be/NVpXwc08igk
                   </Link>{" "}
                 </li>
               </Typography>
             </article>
 
             <Image
-              src={images.podcharge.mobile.src}
-              alt={images.podcharge.mobile.alt}
+              src={images.mava.mobile.src}
+              alt={images.mava.mobile.alt}
               width={1000}
               height={1000}
               className="w-auto h-full col-span-2 border-app hidden lg:block"
@@ -89,4 +85,4 @@ const ProjectsPodCharge = () => {
   );
 };
 
-export default memo(ProjectsPodCharge);
+export default memo(ProjectsMava);
