@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import Image from "next/image";
 import { memo, PropsWithChildren } from "react";
 import Typography from "~/components/atoms/Typography/Typography";
@@ -6,11 +7,14 @@ import icons from "~/shared/libs/icons";
 interface Props {
   title: string;
   isLoading?: boolean;
+  className?: string;
 }
 
 const Header = (props: PropsWithChildren<Props>) => {
   return (
-    <header className="w-full flex flex-row items-stretch bg-secondary py-0.5 px-1 border-app h-7">
+    <header
+      className={clsx("w-full flex flex-row items-stretch bg-secondary py-0.5 px-1 border-app h-7", props.className)}
+    >
       <Image src={icons.headerLeft.src} alt={icons.headerLeft.alt} width={20} height={20} className="mr-2" />
 
       <div className="min-h-full w-full flex flex-col justify-center items-center flex-1 mr-3 my-0.5 relative bottom-0.5 overflow-hidden">

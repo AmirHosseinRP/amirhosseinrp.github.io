@@ -10,6 +10,10 @@ const icons = {
   word: { src: `${BASE_ICONS_URL}/word.svg`, alt: "word" },
   separator: { src: `${BASE_ICONS_URL}/separator.svg`, alt: "separator" },
   startupFinderLogo: { src: `${BASE_ICONS_URL}/startup-finder-logo.svg`, alt: "startup finder" },
+  arrowRight: { src: `${BASE_ICONS_URL}/arrow-right.svg`, alt: "arrow-right" },
+  search: { src: `${BASE_ICONS_URL}/search.svg`, alt: "search" },
+  earth: { src: `${BASE_ICONS_URL}/earth.svg`, alt: "earth" },
+  bookmark: { src: `${BASE_ICONS_URL}/bookmark.svg`, alt: "bookmark" },
 };
 
 export default icons;
