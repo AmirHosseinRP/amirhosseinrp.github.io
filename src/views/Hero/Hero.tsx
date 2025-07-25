@@ -19,9 +19,15 @@ const Hero = () => {
           Download my resume:
         </Typography>
 
-        <Button href={env.links.resume ?? ""} endIconSrc={icons.pdf.src} download>
-          download
-        </Button>
+        <div className="flex gap-3">
+          <Button href={env.links.resumePdf} endIconSrc={icons.pdf.src} download>
+            PDF
+          </Button>
+
+          <Button href={env.links.resumeDocx} endIconSrc={icons.word.src} download>
+            Docx
+          </Button>
+        </div>
       </div>
     </section>
   );
