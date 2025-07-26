@@ -8,7 +8,7 @@ import images from "~/shared/libs/images";
 const ProjectsMava = () => {
   return (
     <>
-      <BrowserWindow title="Project" subtitle="Ma'va">
+      <BrowserWindow title="Project" subtitle="Ma'va" className="mt-8">
         <section className="flex flex-col gap-5 p-5 border-app">
           <Image
             src={images.mava.desktop.src}
