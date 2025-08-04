@@ -79,6 +79,8 @@ jobs:
           NEXT_PUBLIC_APP_VERSION: ${{ vars.NEXT_PUBLIC_APP_VERSION }}
           NEXT_PUBLIC_RESUME_PDF_LINK: ${{ vars.NEXT_PUBLIC_RESUME_PDF_LINK }}
           NEXT_PUBLIC_RESUME_DOCX_LINK: ${{ vars.NEXT_PUBLIC_RESUME_DOCX_LINK }}
+          NEXT_PUBLIC_APP_CONTACT_FORM_ID: ${{ vars.NEXT_PUBLIC_APP_CONTACT_FORM_ID }}
+          NEXT_PUBLIC_API_FORMSPREE: ${{ vars.NEXT_PUBLIC_API_FORMSPREE }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
