@@ -1,0 +1,126 @@
+.input {
+  background-color: #f1f1f1;
+  color: var(--prose-primary);
+  transition-duration: 0s !important;
+  pointer-events: none;
+}
+
+.input__field {
+  outline: none;
+  border-radius: 2px;
+  transition-duration: 0s !important;
+}
+
+.input {
+  clip-path: polygon(
+    0px calc(100% - 4px),
+    2px calc(100% - 4px),
+    2px calc(100% - 2px),
+    4px calc(100% - 2px),
+    4px 100%,
+    calc(100% - 4px) 100%,
+    calc(100% - 4px) calc(100% - 2px),
+    calc(100% - 2px) calc(100% - 2px),
+    calc(100% - 2px) calc(100% - 4px),
+    100% calc(100% - 4px),
+    100% 4px,
+    calc(100% - 2px) 4px,
+    calc(100% - 2px) 2px,
+    calc(100% - 4px) 2px,
+    calc(100% - 4px) 0px,
+    4px 0px,
+    4px 2px,
+    2px 2px,
+    2px 4px,
+    0px 4px
+  );
+  position: relative;
+}
+
+.input {
+  border: 2px solid transparent;
+}
+
+.input::after {
+  content: "";
+  position: absolute;
+  clip-path: polygon(
+    0px calc(100% - 4px),
+    2px calc(100% - 4px),
+    2px calc(100% - 2px),
+    4px calc(100% - 2px),
+    4px 100%,
+    calc(100% - 4px) 100%,
+    calc(100% - 4px) calc(100% - 2px),
+    calc(100% - 2px) calc(100% - 2px),
+    calc(100% - 2px) calc(100% - 4px),
+    100% calc(100% - 4px),
+    100% 4px,
+    calc(100% - 2px) 4px,
+    calc(100% - 2px) 2px,
+    calc(100% - 4px) 2px,
+    calc(100% - 4px) 0px,
+    4px 0px,
+    4px 2px,
+    2px 2px,
+    2px 4px,
+    0px 4px,
+    0px 50%,
+    2px 50%,
+    2px 4px,
+    4px 4px,
+    4px 2px,
+    calc(100% - 4px) 2px,
+    calc(100% - 4px) 4px,
+    calc(100% - 2px) 4px,
+    calc(100% - 2px) calc(100% - 4px),
+    calc(100% - 4px) calc(100% - 4px),
+    calc(100% - 4px) calc(100% - 2px),
+    4px calc(100% - 2px),
+    4px calc(100% - 4px),
+    2px calc(100% - 4px),
+    2px 50%,
+    0px 50%
+  );
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #262626;
+  display: block;
+  pointer-events: none;
+}
+
+.input__has-error::after {
+  background: var(--critical) !important;
+}
+
+.input::after {
+  margin: -2px;
+}
+
+.input__span {
+  position: relative;
+  pointer-events: none;
+}
+
+.input__span::before,
+.input__span::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+}
+
+.input__span::before {
+  border-top: 3px solid #26262627;
+  border-left: 3px solid #26262627;
+}
+
+.input__span::after {
+  border-right: 3px solid #26262670;
+  border-bottom: 3px solid #26262670;
+}

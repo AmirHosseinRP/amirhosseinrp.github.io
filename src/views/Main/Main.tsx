@@ -7,6 +7,7 @@ import Experiences from "~/views/Experiences/Experiences";
 import Hero from "~/views/Hero/Hero";
 import Projects from "~/views/Projects/Projects";
 import Skills from "~/views/Skills/Skills";
+import Contact from "~/views/Contact/Contact";
 
 const Main = () => {
   const containerRef = useRef(null);
@@ -21,6 +22,8 @@ const Main = () => {
       <Experiences ref={containerRef} scrollYProgress={scrollYProgress} />
 
       <Projects />
+
+      <Contact />
     </Container>
   );
 };
