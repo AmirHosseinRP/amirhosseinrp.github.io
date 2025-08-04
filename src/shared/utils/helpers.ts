@@ -25,3 +25,7 @@ export const getBrowserName = (): BrowserType | null => {
 
   return browser ?? null;
 };
+
+export const toEnglishDigit = (str: string): string => {
+  return str.toString().replace(/[۰-۹]/g, d => "۰۱۲۳۴۵۶۷۸۹".indexOf(d).toString());
+};
