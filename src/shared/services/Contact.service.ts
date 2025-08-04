@@ -9,8 +9,9 @@ export type ContactSendPayload = {
 
 const ContactSvc = {
   send: async (payload: ContactSendPayload) => {
-    if (env.api.formSpree && env.app.contactFormId)
+    if (env.api.formSpree && env.app.contactFormId) {
       return await axios.post(`${env.api.formSpree}/${env.app.contactFormId}`, payload);
+    }
   },
 };
 

@@ -23,7 +23,13 @@ const Button = (props: Props) => {
     return (
       <button
         onClick={props.onClick}
-        className={clsx("relative flex items-stretch text-lg", styles["btn"], props.className)}
+        disabled={props.disabled}
+        className={clsx(
+          "relative flex items-stretch text-lg",
+          styles["btn"],
+          props.className,
+          props.disabled && "opacity-50 cursor-not-allowed"
+        )}
       >
         <span
           className={clsx(
