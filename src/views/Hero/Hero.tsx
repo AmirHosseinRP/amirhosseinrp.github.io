@@ -27,8 +27,6 @@ const Hero = () => {
           <Button href={env.links.resumeDocx} endIconSrc={icons.word.src} download>
             Docx
           </Button>
-          <Button href={env.api.formSpree}>form url test</Button>
-          <Button href={env.app.contactFormId}>form id test</Button>
         </div>
       </div>
     </section>
