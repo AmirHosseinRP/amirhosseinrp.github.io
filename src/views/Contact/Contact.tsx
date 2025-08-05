@@ -31,61 +31,88 @@ const Contact = () => {
   });
 
   return (
-    <section className="flex flex-col mt-16">
-      <Window title="Contact" className="z-10 max-w-[90%] md:max-w-[80%] xl:max-w-[60%]">
-        <div className="p-4 border-app flex flex-col gap-4 bg-[#F1F1F1]">
-          <CardRow
-            label="Email"
-            value={
-              <Link href="mailto:rezapanah.dev@gmail.com" className="text-prose-brand underline">
-                rezapanah.dev@gmail.com
-              </Link>
-            }
-          />
-          <CardRow
-            label="Phone"
-            value={
-              <Link href="tel:+989155509756" className="text-prose-brand underline">
-                +989155509756
-              </Link>
-            }
-          />
-          <CardRow
-            label="Linkedin"
-            value={
-              <Link
-                href="https://www.linkedin.com/in/amirhossein-rezapanah-5919a220a/"
-                className="text-prose-brand underline"
-              >
-                linkedin.com/in/amirhossein-rezapanah
-              </Link>
-            }
-          />
-          <CardRow
-            label="GitHub"
-            value={
-              <Link href="https://github.com/AmirHosseinRP" className="text-prose-brand underline">
-                github.com/AmirHosseinRP
-              </Link>
-            }
-          />
+    <section className="flex flex-col mt-8">
+      <Window title="Contact" className="w-full">
+        <div className="flex flex-col lg:flex-row gap-4 p-4 border-app">
+          <div className="p-4 border-app flex flex-col justify-around gap-4 md:gap-10 bg-[#F1F1F1]">
+            <CardRow
+              label="Email"
+              value={
+                <Link href="mailto:rezapanah.dev@gmail.com" className="text-prose-brand underline">
+                  rezapanah.dev@gmail.com
+                </Link>
+              }
+            />
+            <CardRow
+              label="Phone"
+              value={
+                <Link href="tel:+989155509756" className="text-prose-brand underline">
+                  +989155509756
+                </Link>
+              }
+            />
+            <CardRow
+              label="Linkedin"
+              value={
+                <Link
+                  href="https://www.linkedin.com/in/amirhossein-rezapanah-5919a220a/"
+                  className="text-prose-brand underline"
+                >
+                  linkedin.com/in/amirhossein-rezapanah
+                </Link>
+              }
+            />
+            <CardRow
+              label="Telegram"
+              value={
+                <Link href="https://t.me/rezapanah" className="text-prose-brand underline">
+                  t.me/rezapanah
+                </Link>
+              }
+            />
+            <CardRow
+              label="GitHub"
+              value={
+                <Link href="https://github.com/AmirHosseinRP" className="text-prose-brand underline">
+                  github.com/AmirHosseinRP
+                </Link>
+              }
+            />
+            <CardRow
+              label="Stack Overflow"
+              value={
+                <Link
+                  href="https://stackoverflow.com/users/21869708/amirhosseinrp"
+                  className="text-prose-brand underline"
+                >
+                  stackoverflow.com/amirhosseinrp
+                </Link>
+              }
+            />
+            <CardRow
+              label="GitLab"
+              value={
+                <Link href="https://gitlab.com/AmirHosseinRP" className="text-prose-brand underline">
+                  gitlab.com/AmirHosseinRP
+                </Link>
+              }
+            />
+          </div>
+
+          <FormProvider {...fromMethods}>
+            <form className="flex flex-col gap-1 border-app p-4 flex-1" onSubmit={onSubmit}>
+              <FormField.Text name="name" label="Name" required />
+
+              <FormField.Text name="email" label="Email" required />
+
+              <FormField.Textarea name="message" label="Message" required />
+
+              <Button type="submit" className="min-h-10" isLoading={isLoading} disabled={isLoading}>
+                Submit
+              </Button>
+            </form>
+          </FormProvider>
         </div>
-      </Window>
-
-      <Window title="Message" className="self-end max-w-[90%] md:max-w-[80%] xl:max-w-[60%]">
-        <FormProvider {...fromMethods}>
-          <form className="flex flex-col gap-1 border-app p-4" onSubmit={onSubmit}>
-            <FormField.Text name="name" label="Name" required />
-
-            <FormField.Text name="email" label="Email" required />
-
-            <FormField.Textarea name="message" label="Message" required />
-
-            <Button type="submit" className="min-h-10" isLoading={isLoading} disabled={isLoading}>
-              Submit
-            </Button>
-          </form>
-        </FormProvider>
       </Window>
     </section>
   );

@@ -25,7 +25,7 @@ const CardRow = (props: Props) => {
           <Typography
             variant="label3"
             color="prose-primary"
-            className="whitespace-pre-wrap text-end"
+            className="whitespace-pre-wrap text-end text-ellipsis truncate"
             ltr={props.ltrValue}
           >
             {props.value}
